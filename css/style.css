@@ -1,0 +1,436 @@
+/* Grundläggande styling */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    margin: 0;
+}
+
+
+/*Start*/
+
+/*Navbar*/
+
+.navbar {
+    font-family: "lft-etica-mono", sans-serif;
+    font-weight: 200;
+    position: sticky;  /* Gör navbaren sticky */
+    top: 0;            /* Fastnar när den når toppen */
+    background-color: #2E2A2A; /* Sätt samma bakgrundsfärg som du har för din banner */
+    width: 100%;       /* Gör navbaren lika bred som skärmen */
+    z-index: 9999;     /* Ser till att navbaren ligger ovanpå annat innehåll */
+    padding: 1rem;
+    
+}
+
+
+.navbar ul {
+    list-style: none; /* Tar bort standard punktlista */
+    display: flex; /* Gör listan horisontell */
+    justify-content: center; /* Centrerar listan horisontellt */    
+    gap: 6rem; /* Ger utrymme mellan varje länk */
+}
+
+.nav-link {
+    padding-bottom: 5px; /* Ger utrymme för strecket */
+    display: inline-block;
+    text-decoration: none;
+    color: #F9F9F6;
+    font-size: 1.2rem;
+    opacity: 0; /* Länkarna är osynliga i början */
+    transform: translateX(-20px); /* Börjar vänster om sin normala plats */
+    animation: slideIn 0.5s ease-out forwards; /* Animation för varje länk */
+    animation-delay: calc(0.5s * var(--index)); /* Fördröjning för varje länk, börjar från vänster */
+}
+
+/* Animation för att länkarna ska "segla in" från vänster */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* För att sätta index på varje länk */
+.navbar li:nth-child(1) {
+    --index: 1;
+}
+
+.navbar li:nth-child(2) {
+    --index: 2;
+}
+
+.navbar li:nth-child(3) {
+    --index: 3;
+}
+
+/* För hover-effekt med växande streck från vänster till höger */
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Tunn höjd för strecket vid hover */
+    background-color: #F9F9F6;
+    transition: width 0.3s ease; /* Gör att bredden växer från vänster */
+    border-radius: 3px; /* Runda kanter på strecket */
+}
+
+/* När användaren hovrar på en länk */
+.nav-link:hover::before {
+    width: 100%; /* Strecket växer till 100% bredd */
+}
+
+/* För den aktiva länken (streck under "Start" när sidan laddas) */
+.nav-link.active::before {
+    width: 100%; /* Se till att strecket under aktiv länk är fullt brett */
+    height: 2px; /* Gör strecket lika tunt som vid hover */
+    background-color:#AF9D8F;
+}
+
+
+/*Banner*/
+
+.banner {
+    height: 100vh; /* Full höjd på skärmen */
+    background-color:#2E2A2A; /* Svart bakgrund */
+}
+
+/* Titel-styling */
+.heading {
+    font-family: "urbane", sans-serif;
+    color: #F9F9F6;
+    font-size: 12vw; /* Gör rubriken stor */
+    width: 100vw; /* Tar upp hela skärmbredden */
+    text-align: center;
+    margin: 0; /* Ingen extra marginal */
+    padding: 0; /* Vertikalt utrymme */
+    position: absolute; /* Absolut placering */
+    bottom: 0; /* Placerar längst ner i förälderelementet */
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%); /* Startar utanför skärmen till vänster */
+        opacity: 0; /* Börjar osynlig */
+    }
+    100% {
+        transform: translateX(0); /* Slutar på sin normala plats */
+        opacity: 1; /* Slutar synlig */
+    }
+}
+
+
+
+
+/* Sektion 2*/
+.section-2 {
+    padding: 6rem 0;
+    background-color: #2E2A2A; /* Svart/grå bakgrund */
+}
+
+.section-2 .container {
+    display: flex;
+    align-items: center; /* Vertikal centrering */
+    width: 60%;
+    margin: 0 auto;
+}
+
+.section-2 .image {
+    width: 50%; /* Bilden tar upp 45% av utrymmet */
+    height: auto;
+}
+
+
+.section-2 .text {
+    width: 50%; /* Texten tar upp 50% av bredden */
+    color: #F9F9F6; /* Ljus textfärg */
+    padding-left: 2rem; /* Utrymme mellan bild och text */
+}
+
+
+.text h2, .text p {
+    font-family: "lft-etica-mono", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.highlighted {
+    color: #AF9D8F;
+}
+
+
+p.additional-text {
+    margin-top: 5rem;
+    margin-bottom: 2rem; /* Liten avstånd före knappen */
+    font-family: "lft-etica-mono", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+/* Stil på knappen */
+
+button {
+    font-family: "lft-etica-mono", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 10px 20px;
+    background-color: #F9F9F6;
+    color: #2E2A2A;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Smidig övergång */
+}
+
+button:hover {
+    background-color: #c6c4c4; /* Ljusare färg */
+    transform: translateY(3px); /* Simulerar att knappen trycks ner */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Minskar skuggan */
+}
+
+button:active {
+    transform: translateY(5px); /* Trycks ner ännu mer när man klickar */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Nästan ingen skugga */
+}
+
+
+/* Responsiv design - Bild och text staplas vid mindre skärmar */
+@media screen and (max-width: 768px) {
+    .section-2 .container {
+        flex-direction: column; /* Stapla bild och text vertikalt */
+        text-align: center; /* Centrerar texten */
+    }
+
+    .section-2 .image {
+        width: 100%; /* Gör bilden större på små skärmar */
+        margin-bottom: 1rem;
+
+    }
+
+    .section-2 .text {
+        width: 100%;
+        text-align: left; /* Centrerar texten */
+        font-size: 0.6rem;
+    }
+
+}
+
+
+/*Sektion 3*/
+
+.section-3 {
+    background-color: #F9F9F6;
+    padding: 4rem 0;
+
+}
+
+.recent-projects {
+    max-width: 1200px; /* Maxbredd för sektionen */
+    margin: 0 auto; /* Centrerar sektionen på sidan */
+
+}
+
+.recent-projects h2 {
+    font-family: "urbane", sans-serif;
+    color: #2E2A2A; /* Textfärg */
+    text-align: left;
+    margin-bottom: 2rem; /* Avstånd mellan rubrik och bilder */
+    padding-left: 0; /*Gör rubriken i linje med första bilden*/
+    font-size: 1.5rem;
+}
+
+/* Behåll bilderna och texten på rad */
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Gör så att bilderna radbryts vid mindre skärmar */
+    gap: 2rem; /* Utrymme mellan bilderna */
+    max-width: 1200px;
+    margin: 0 auto; /* Centrerar hela container */
+}
+
+/* Varje bild + texten under */
+.image-item {
+    width: 30%; /* Varje bild tar upp 30% av bredden */
+    display: flex;
+    flex-direction: column; /* Bilden ovanför texten */
+    align-items: flex-start; /* Justerar texten till vänster */
+    text-align: left;
+}
+
+/* Bilderna kommer att vara samma storlek */
+.image-item img {
+    width: 100%; /* Gör så att bilden tar upp hela bredden av sitt element */
+    height: auto; /* Sätt en fast höjd */
+    margin-bottom: 10px;
+}
+
+/* Text under varje bild */
+.text-container {
+        width: 100%; /* Matchar bredden på bilden */
+        padding-left: 0; /* Ingen extra padding */
+        margin: 0; /* Ingen extra marginal */
+    
+}
+
+.text-container h3, 
+.text-container .year, 
+.text-container .caption {
+    margin: 0; /* Ta bort onödiga marginaler */
+    padding: 0; /* Ingen extra padding */
+}
+
+/* Rubrik under bild */
+.text-container h3 {
+    color: #2E2A2A;
+    font-family: "urbane", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Årtal */
+.text-container .year {
+    font-family: "urbane", sans-serif;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #2E2A2A;
+    margin-bottom: 2rem;
+}
+
+/* Bildtext */
+.text-container .caption {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #2E2A2A;
+    font-family: "lft-etica-mono", sans-serif;
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: #2E2A2A;
+    padding: 20px;
+    text-align: left; /* Lägg till för att vänsterjustera all text i footern */
+  }
+
+  footer h2{
+    font-family: "urbane", sans-serif;
+    color: #F9F9F6; /* Textfärg */
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .footer-row {
+    display: flex;
+    justify-content: flex-start; /* Vänsterjustera alla element på varje rad */
+    margin-bottom: 10px;
+  }
+  
+  .footer-left {
+    width: 20%;
+  }
+  
+  .footer-left h3 {
+    margin-bottom: 20px;
+    font-family: "basic-sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    color: #F9F9F6;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  footer ul li {
+    margin-bottom: 5px;
+  }
+  
+  footer ul li a {
+    text-decoration: none;
+    color: #F9F9F6;
+    font-family: "basic-sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    display: inline-block; /* Gör länkarna till block så att de kan flyttas */
+    transition: transform 0.3s ease, color 0.3s ease; /* Lägg till en övergång för att göra effekten smidig */
+  }
+
+  /* Hover-effekt */
+footer ul li a:hover {
+    transform: translateX(10px); /* Flytta länken 10px åt höger */
+    color: #FF9900; /* Ändra färg vid hover */
+}
+  
+  .social-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+
+  .copy {
+    color: #F9F9F6;
+    font-family: "basic-sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-top: 30px;
+    font-size: 1rem;
+
+  }
+
+  .social-links {
+    line-height: 6px;
+  }
+
+  .footer-left {
+    line-height: 15px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
