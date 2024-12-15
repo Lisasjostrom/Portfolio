@@ -407,8 +407,134 @@ footer ul li a:hover {
 
 
 
+/*About*/
+
+.about-heading {
+    font-size: 3rem;
+    font-family: "urbane", sans-serif;
+    color: #F9F9F6;
+    background-color: #2E2A2A;
+    padding: 2rem 3rem;
+}
+
+.about{
+    padding: 1rem 0;
+    background-color: #F9F9F6;
+    text-align: center;
+  }
 
 
+.about h2 {
+    font-family: "urbane", sans-serif;
+    font-weight: bold;
+    color: #2E2A2A;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+      
+      .about .container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 3rem;
+
+      }
+      
+      .text {
+        flex: 1; /* Text takes up available space */
+        max-width: 50%;
+      }
+
+.text .hello {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+      }
+      
+
+      .text p {
+        font-size: 1rem;
+        line-height: 20px;
+        color: #2E2A2A;
+        font-family: "lft-etica-mono", sans-serif;
+        font-weight: 400;
+      }
+
+      .about-image {
+        flex: 1; /* Image takes up available space */
+        max-width: 50%;
+      }
+      
+      .about-image img {
+        width: 60%;
+        height: auto;
+
+      }
+
+            /* Responsiv design för mindre skärmar */
+            @media (max-width: 768px) {
+                .container {
+                  flex-direction: column; /* Byt till kolumnlayout på mindre skärmar */
+                  text-align: center; /* Centrera texten */
+                }
+              
+                .text {
+                  max-width: 100%; /* Texten ska ta upp hela bredden */
+                  margin-bottom: 1.5rem;
+                }
+              
+                .image {
+                  max-width: 100%; /* Bilden ska ta upp hela bredden */
+                }
+              }
+
+              /*Contact*/ 
+
+      .contact {
+        background-color: #F9F9F6;
+        text-align: left;
+        padding-left: 9rem;
+        margin: 4rem 0;
+      }
+      .contact h2 {
+        font-family: "urbane", sans-serif;
+        font-weight: bold;
+        color: #2E2A2A;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .contact h3 {
+        font-family: "basic-sans", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 20px;
+      }
+
+      .contact li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+
+      .contact ul li a {
+        color: #2E2A2A;
+      }
+
+      .fa-solid {
+        color: #2E2A2A;
+        margin-right: 10px;
+      }
+
+
+
+
+      
+    
+
+      
+
+      
 
 
 
