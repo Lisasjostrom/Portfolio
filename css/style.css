@@ -14,6 +14,11 @@ main {
   background-color: #F9F9F6;
 }
 
+:target {
+  padding-top: 150px;  /* Justera efter storleken på din header */
+  margin-top: -100px;   /* Kompenserar för headerns höjd */
+}
+
 
 
 /* Rörlig Navbar */
@@ -1058,3 +1063,4 @@ footer ul li a:hover {
 .footer-left {
   line-height: 15px;
 }
+
