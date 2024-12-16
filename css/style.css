@@ -1,13 +1,13 @@
 /* Grundläggande styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 
@@ -15,42 +15,57 @@ body {
 .navbar-animate {
   font-family: "lft-etica-mono", sans-serif;
   font-weight: 200;
-  position: sticky;  /* Gör navbaren sticky */
-  top: 0;            /* Fastnar när den når toppen */
-  background-color: #2E2A2A; /* Sätt samma bakgrundsfärg som du har för din banner */
-  width: 100%;       /* Gör navbaren lika bred som skärmen */
-  z-index: 9999;     /* Ser till att navbaren ligger ovanpå annat innehåll */
+  position: sticky;
+  /* Gör navbaren sticky */
+  top: 0;
+  /* Fastnar när den når toppen */
+  background-color: #2E2A2A;
+  /* Sätt samma bakgrundsfärg som du har för din banner */
+  width: 100%;
+  /* Gör navbaren lika bred som skärmen */
+  z-index: 9999;
+  /* Ser till att navbaren ligger ovanpå annat innehåll */
   padding: 1rem;
 }
 
 .navbar-animate ul {
-  list-style: none; /* Tar bort standard punktlista */
-  display: flex; /* Gör listan horisontell */
-  justify-content: center; /* Centrerar listan horisontellt */    
-  gap: 6rem; /* Ger utrymme mellan varje länk */
+  list-style: none;
+  /* Tar bort standard punktlista */
+  display: flex;
+  /* Gör listan horisontell */
+  justify-content: center;
+  /* Centrerar listan horisontellt */
+  gap: 6rem;
+  /* Ger utrymme mellan varje länk */
 }
 
 .nav-link-animate {
-  padding-bottom: 5px; /* Ger utrymme för strecket */
+  padding-bottom: 5px;
+  /* Ger utrymme för strecket */
   display: inline-block;
   text-decoration: none;
   color: #F9F9F6;
   font-size: 1.2rem;
-  opacity: 0; /* Länkarna är osynliga i början */
-  transform: translateX(-20px); /* Börjar vänster om sin normala plats */
-  animation: slideIn 0.5s ease-out forwards; /* Animation för varje länk */
-  animation-delay: calc(0.5s * var(--index)); /* Fördröjning för varje länk, börjar från vänster */
+  opacity: 0;
+  /* Länkarna är osynliga i början */
+  transform: translateX(-20px);
+  /* Börjar vänster om sin normala plats */
+  animation: slideIn 0.5s ease-out forwards;
+  /* Animation för varje länk */
+  animation-delay: calc(0.5s * var(--index));
+  /* Fördröjning för varje länk, börjar från vänster */
 }
 
 /* Animation för att länkarna ska "segla in" från vänster */
 @keyframes slideIn {
   0% {
-      opacity: 0;
-      transform: translateX(-20px);
+    opacity: 0;
+    transform: translateX(-20px);
   }
+
   100% {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -74,21 +89,27 @@ body {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px; /* Tunn höjd för strecket vid hover */
+  height: 2px;
+  /* Tunn höjd för strecket vid hover */
   background-color: #F9F9F6;
-  transition: width 0.3s ease; /* Gör att bredden växer från vänster */
-  border-radius: 3px; /* Runda kanter på strecket */
+  transition: width 0.3s ease;
+  /* Gör att bredden växer från vänster */
+  border-radius: 3px;
+  /* Runda kanter på strecket */
 }
 
 /* När användaren hovrar på en länk */
 .nav-link-animate:hover::before {
-  width: 100%; /* Strecket växer till 100% bredd */
+  width: 100%;
+  /* Strecket växer till 100% bredd */
 }
 
 /* För den aktiva länken (streck under "Start" när sidan laddas) */
 .nav-link-animate.active::before {
-  width: 100%; /* Se till att strecket under aktiv länk är fullt brett */
-  height: 2px; /* Gör strecket lika tunt som vid hover */
+  width: 100%;
+  /* Se till att strecket under aktiv länk är fullt brett */
+  height: 2px;
+  /* Gör strecket lika tunt som vid hover */
   background-color: #AF9D8F;
 }
 
@@ -96,29 +117,41 @@ body {
 .navbar {
   font-family: "lft-etica-mono", sans-serif;
   font-weight: 200;
-  position: sticky;  /* Gör navbaren sticky */
-  top: 0;            /* Fastnar när den når toppen */
-  background-color: #2E2A2A; /* Sätt samma bakgrundsfärg som du har för din banner */
-  width: 100%;       /* Gör navbaren lika bred som skärmen */
-  z-index: 9999;     /* Ser till att navbaren ligger ovanpå annat innehåll */
+  position: sticky;
+  /* Gör navbaren sticky */
+  top: 0;
+  /* Fastnar när den når toppen */
+  background-color: #2E2A2A;
+  /* Sätt samma bakgrundsfärg som du har för din banner */
+  width: 100%;
+  /* Gör navbaren lika bred som skärmen */
+  z-index: 9999;
+  /* Ser till att navbaren ligger ovanpå annat innehåll */
   padding: 1rem;
 }
 
 .navbar ul {
-  list-style: none; /* Tar bort standard punktlista */
-  display: flex; /* Gör listan horisontell */
-  justify-content: center; /* Centrerar listan horisontellt */    
-  gap: 6rem; /* Ger utrymme mellan varje länk */
+  list-style: none;
+  /* Tar bort standard punktlista */
+  display: flex;
+  /* Gör listan horisontell */
+  justify-content: center;
+  /* Centrerar listan horisontellt */
+  gap: 6rem;
+  /* Ger utrymme mellan varje länk */
 }
 
 .nav-link {
-  padding-bottom: 5px; /* Ger utrymme för strecket */
+  padding-bottom: 5px;
+  /* Ger utrymme för strecket */
   display: inline-block;
   text-decoration: none;
   color: #F9F9F6;
   font-size: 1.2rem;
-  opacity: 1; /* Gör länkarna synliga direkt */
-  transform: translateX(0); /* Ta bort animationens vänsterskift */
+  opacity: 1;
+  /* Gör länkarna synliga direkt */
+  transform: translateX(0);
+  /* Ta bort animationens vänsterskift */
   /* Ingen animation för att länkarna ska vara statiska */
 }
 
@@ -129,21 +162,27 @@ body {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px; /* Tunn höjd för strecket vid hover */
+  height: 2px;
+  /* Tunn höjd för strecket vid hover */
   background-color: #F9F9F6;
-  transition: width 0.3s ease; /* Gör att bredden växer från vänster */
-  border-radius: 3px; /* Runda kanter på strecket */
+  transition: width 0.3s ease;
+  /* Gör att bredden växer från vänster */
+  border-radius: 3px;
+  /* Runda kanter på strecket */
 }
 
 /* När användaren hovrar på en länk */
 .nav-link:hover::before {
-  width: 100%; /* Strecket växer till 100% bredd */
+  width: 100%;
+  /* Strecket växer till 100% bredd */
 }
 
 /* För den aktiva länken (streck under "Start" när sidan laddas) */
 .nav-link.active::before {
-  width: 100%; /* Se till att strecket under aktiv länk är fullt brett */
-  height: 2px; /* Gör strecket lika tunt som vid hover */
+  width: 100%;
+  /* Se till att strecket under aktiv länk är fullt brett */
+  height: 2px;
+  /* Gör strecket lika tunt som vid hover */
   background-color: #AF9D8F;
 }
 
@@ -153,35 +192,48 @@ body {
 /*Banner*/
 
 .banner {
-    height: 100vh; /* Full höjd på skärmen */
-    background-color:#2E2A2A; /* Svart bakgrund */
+  height: 100vh;
+  /* Full höjd på skärmen */
+  background-color: #2E2A2A;
+  /* Svart bakgrund */
 }
 
 /* Titel-styling */
 .heading {
-    font-family: "urbane", sans-serif;
-    color: #F9F9F6;
-    font-size: 12vw; /* Gör rubriken stor */
-    width: 100vw; /* Tar upp hela skärmbredden */
-    text-align: center;
-    margin: 0; /* Ingen extra marginal */
-    padding: 0; /* Vertikalt utrymme */
-    position: absolute; /* Absolut placering */
-    bottom: 0; /* Placerar längst ner i förälderelementet */
-    animation: slideInFromLeft 1s ease-out forwards;
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  font-size: 12vw;
+  /* Gör rubriken stor */
+  width: 100vw;
+  /* Tar upp hela skärmbredden */
+  text-align: center;
+  margin: 0;
+  /* Ingen extra marginal */
+  padding: 0;
+  /* Vertikalt utrymme */
+  position: absolute;
+  /* Absolut placering */
+  bottom: 0;
+  /* Placerar längst ner i förälderelementet */
+  animation: slideInFromLeft 1s ease-out forwards;
 }
 
 
 
 @keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%); /* Startar utanför skärmen till vänster */
-        opacity: 0; /* Börjar osynlig */
-    }
-    100% {
-        transform: translateX(0); /* Slutar på sin normala plats */
-        opacity: 1; /* Slutar synlig */
-    }
+  0% {
+    transform: translateX(-100%);
+    /* Startar utanför skärmen till vänster */
+    opacity: 0;
+    /* Börjar osynlig */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* Slutar på sin normala plats */
+    opacity: 1;
+    /* Slutar synlig */
+  }
 }
 
 
@@ -189,98 +241,116 @@ body {
 
 /* Sektion 2*/
 .section-2 {
-    padding: 6rem 0;
-    background-color: #2E2A2A; /* Svart/grå bakgrund */
+  padding: 6rem 0;
+  background-color: #2E2A2A;
+  /* Svart/grå bakgrund */
 }
 
 .section-2 .container {
-    display: flex;
-    align-items: center; /* Vertikal centrering */
-    width: 60%;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  /* Vertikal centrering */
+  width: 60%;
+  margin: 0 auto;
 }
 
 .section-2 .image {
-    width: 50%; /* Bilden tar upp 45% av utrymmet */
-    height: auto;
+  width: 50%;
+  /* Bilden tar upp 45% av utrymmet */
+  height: auto;
 }
 
 
 .section-2 .text {
-    width: 50%; /* Texten tar upp 50% av bredden */
-    color: #F9F9F6; /* Ljus textfärg */
-    padding-left: 2rem; /* Utrymme mellan bild och text */
+  width: 50%;
+  /* Texten tar upp 50% av bredden */
+  color: #F9F9F6;
+  /* Ljus textfärg */
+  padding-left: 2rem;
+  /* Utrymme mellan bild och text */
 }
 
 
-.text h2, .text p {
-    font-family: "lft-etica-mono", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    text-align: left;
-    font-size: 1.4rem;
+.text h2,
+.text p {
+  font-family: "lft-etica-mono", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-align: left;
+  font-size: 1.4rem;
 }
 
 .highlighted {
-    color: #AF9D8F;
+  color: #AF9D8F;
 }
 
 
 p.additional-text {
-    margin-top: 5rem;
-    margin-bottom: 2rem; /* Liten avstånd före knappen */
-    font-family: "lft-etica-mono", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  /* Liten avstånd före knappen */
+  font-family: "lft-etica-mono", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1rem;
 }
 
 /* Stil på knappen */
 
 button {
-    font-family: "lft-etica-mono", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    padding: 10px 20px;
-    background-color: #F9F9F6;
-    color: #2E2A2A;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease; /* Smidig övergång */
+  font-family: "lft-etica-mono", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 10px 20px;
+  background-color: #F9F9F6;
+  color: #2E2A2A;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  /* Smidig övergång */
 }
 
 button:hover {
-    background-color: #c6c4c4; /* Ljusare färg */
-    transform: translateY(3px); /* Simulerar att knappen trycks ner */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Minskar skuggan */
+  background-color: #c6c4c4;
+  /* Ljusare färg */
+  transform: translateY(3px);
+  /* Simulerar att knappen trycks ner */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Minskar skuggan */
 }
 
 button:active {
-    transform: translateY(5px); /* Trycks ner ännu mer när man klickar */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Nästan ingen skugga */
+  transform: translateY(5px);
+  /* Trycks ner ännu mer när man klickar */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  /* Nästan ingen skugga */
 }
 
 
 /* Responsiv design - Bild och text staplas vid mindre skärmar */
 @media screen and (max-width: 768px) {
-    .section-2 .container {
-        flex-direction: column; /* Stapla bild och text vertikalt */
-        text-align: center; /* Centrerar texten */
-    }
+  .section-2 .container {
+    flex-direction: column;
+    /* Stapla bild och text vertikalt */
+    text-align: center;
+    /* Centrerar texten */
+  }
 
-    .section-2 .image {
-        width: 100%; /* Gör bilden större på små skärmar */
-        margin-bottom: 1rem;
+  .section-2 .image {
+    width: 100%;
+    /* Gör bilden större på små skärmar */
+    margin-bottom: 1rem;
 
-    }
+  }
 
-    .section-2 .text {
-        width: 100%;
-        text-align: left; /* Centrerar texten */
-        font-size: 0.6rem;
-    }
+  .section-2 .text {
+    width: 100%;
+    text-align: left;
+    /* Centrerar texten */
+    font-size: 0.6rem;
+  }
 
 }
 
@@ -288,373 +358,652 @@ button:active {
 /*Sektion 3*/
 
 .section-3 {
-    background-color: #F9F9F6;
-    padding: 4rem 0;
-
+  background-color: #F9F9F6;
 }
 
 .recent-projects {
-    max-width: 1200px; /* Maxbredd för sektionen */
-    margin: 0 auto; /* Centrerar sektionen på sidan */
+  max-width: 1200px;
+  /* Maxbredd för sektionen */
+  margin: 0 auto;
+  /* Centrerar sektionen på sidan */
+  padding: 4rem 0;
 
 }
 
 .recent-projects h2 {
-    font-family: "urbane", sans-serif;
-    color: #2E2A2A; /* Textfärg */
-    text-align: left;
-    margin-bottom: 2rem; /* Avstånd mellan rubrik och bilder */
-    padding-left: 0; /*Gör rubriken i linje med första bilden*/
-    font-size: 1.5rem;
+  font-family: "urbane", sans-serif;
+  color: #2E2A2A;
+  /* Textfärg */
+  text-align: left;
+  margin-bottom: 2rem;
+  /* Avstånd mellan rubrik och bilder */
+  padding-left: 0;
+  /*Gör rubriken i linje med första bilden*/
+  font-size: 1.5rem;
 }
 
 /* Behåll bilderna och texten på rad */
 .image-container {
-    display: flex;
-    flex-wrap: wrap; /* Gör så att bilderna radbryts vid mindre skärmar */
-    gap: 2rem; /* Utrymme mellan bilderna */
-    max-width: 1200px;
-    margin: 0 auto; /* Centrerar hela container */
+  display: flex;
+  gap: 2rem;
+  /* Utrymme mellan bilderna */
+  margin: 0 auto;
+  /* Centrerar hela container */
 }
 
 /* Varje bild + texten under */
 .image-item {
-    width: 30%; /* Varje bild tar upp 30% av bredden */
-    display: flex;
-    flex-direction: column; /* Bilden ovanför texten */
-    align-items: flex-start; /* Justerar texten till vänster */
-    text-align: left;
+  width: 40%;
+  /* Varje bild tar upp 40% av bredden */
+  flex-direction: column;
+  /* Bilden ovanför texten */
 }
 
 /* Bilderna kommer att vara samma storlek */
 .image-item img {
-    width: 100%; /* Gör så att bilden tar upp hela bredden av sitt element */
-    height: auto; /* Sätt en fast höjd */
-    margin-bottom: 10px;
+  width: 100%;
+  /* Gör så att bilden tar upp hela bredden av sitt element */
+  height: auto;
+  /* Sätt en fast höjd */
+  margin-bottom: 10px;
 }
 
 /* Text under varje bild */
 .text-container {
-        width: 100%; /* Matchar bredden på bilden */
-        padding-left: 0; /* Ingen extra padding */
-        margin: 0; /* Ingen extra marginal */
-    
+  width: 100%;
+  /* Matchar bredden på bilden */
+  padding-left: 0;
+  /* Ingen extra padding */
+  margin: 0;
+  /* Ingen extra marginal */
+
 }
 
-.text-container h3, 
-.text-container .year, 
+.text-container h3,
+.text-container .year,
 .text-container .caption {
-    margin: 0; /* Ta bort onödiga marginaler */
-    padding: 0; /* Ingen extra padding */
+  margin: 0;
+  /* Ta bort onödiga marginaler */
+  padding: 0;
+  /* Ingen extra padding */
 }
 
 /* Rubrik under bild */
 .text-container h3 {
-    color: #2E2A2A;
-    font-family: "urbane", sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
+  color: #2E2A2A;
+  font-family: "urbane", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Årtal */
 .text-container .year {
-    font-family: "urbane", sans-serif;
-    font-weight: normal;
-    font-size: 0.9rem;
-    color: #2E2A2A;
-    margin-bottom: 2rem;
+  font-family: "urbane", sans-serif;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #2E2A2A;
+  margin-bottom: 2rem;
 }
 
 /* Bildtext */
 .text-container .caption {
-    font-size: 0.9rem;
-    font-weight: normal;
-    color: #2E2A2A;
-    font-family: "lft-etica-mono", sans-serif;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #2E2A2A;
+  font-family: "lft-etica-mono", sans-serif;
 }
 
 
 /*Footer*/
 
 footer {
-    background-color: #2E2A2A;
-    padding: 20px;
-    text-align: left; /* Lägg till för att vänsterjustera all text i footern */
-  }
-
-  footer h2{
-    font-family: "urbane", sans-serif;
-    color: #F9F9F6; /* Textfärg */
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .footer-row {
-    display: flex;
-    justify-content: flex-start; /* Vänsterjustera alla element på varje rad */
-    margin-bottom: 10px;
-  }
-  
-  .footer-left {
-    width: 20%;
-  }
-  
-  .footer-left h3 {
-    margin-bottom: 20px;
-    font-family: "basic-sans", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1rem;
-    color: #F9F9F6;
-  }
-  
-  footer ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  footer ul li {
-    margin-bottom: 5px;
-  }
-  
-  footer ul li a {
-    text-decoration: none;
-    color: #F9F9F6;
-    font-family: "basic-sans", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    display: inline-block; /* Gör länkarna till block så att de kan flyttas */
-    transition: transform 0.3s ease, color 0.3s ease; /* Lägg till en övergång för att göra effekten smidig */
-  }
-
-  /* Hover-effekt */
-footer ul li a:hover {
-    transform: translateX(10px); /* Flytta länken 10px åt höger */
-    color: #FF9900; /* Ändra färg vid hover */
+  background-color: #2E2A2A;
+  padding: 20px;
+  text-align: left;
+  /* Lägg till för att vänsterjustera all text i footern */
 }
-  
-  .social-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-  
 
-  .copy {
-    color: #F9F9F6;
-    font-family: "basic-sans", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    margin-top: 30px;
-    font-size: 1rem;
+footer h2 {
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  /* Textfärg */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-  }
+.footer-row {
+  display: flex;
+  justify-content: flex-start;
+  /* Vänsterjustera alla element på varje rad */
+  margin-bottom: 10px;
+}
 
-  .social-links {
-    line-height: 6px;
-  }
+.footer-left {
+  width: 20%;
+}
 
-  .footer-left {
-    line-height: 15px;
-  }
+.footer-left h3 {
+  margin-bottom: 20px;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  color: #F9F9F6;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #F9F9F6;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  display: inline-block;
+  /* Gör länkarna till block så att de kan flyttas */
+  transition: transform 0.3s ease, color 0.3s ease;
+  /* Lägg till en övergång för att göra effekten smidig */
+}
+
+/* Hover-effekt */
+footer ul li a:hover {
+  transform: translateX(10px);
+  /* Flytta länken 10px åt höger */
+  color: #FF9900;
+  /* Ändra färg vid hover */
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+
+.copy {
+  color: #F9F9F6;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-top: 30px;
+  font-size: 1rem;
+
+}
+
+.social-links {
+  line-height: 6px;
+}
+
+.footer-left {
+  line-height: 15px;
+}
 
 
 
 /*About*/
 
 .about-heading {
-    font-size: 3rem;
-    font-family: "urbane", sans-serif;
-    color: #F9F9F6;
-    background-color: #2E2A2A;
-    padding: 2rem 3rem;
+  font-size: 3rem;
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  background-color: #2E2A2A;
+  padding: 2rem 3rem;
 }
 
-.about{
-    padding: 1rem 0;
-    background-color: #F9F9F6;
-    text-align: center;
-  }
+.about {
+  padding: 1rem;
+  background-color: #F9F9F6;
+  text-align: center;
+}
 
 
 .about h2 {
-    font-family: "urbane", sans-serif;
-    font-weight: bold;
-    color: #2E2A2A;
-    font-size: 2rem;
-    margin-bottom: 3rem;
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
-      
-      .about .container {
-        display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding-top: 3rem;
 
-      }
-      
-      .about .text {
-        flex: 1; /* Text takes up available space */
-        max-width: 50%;
-      }
+.about .container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 3rem;
+  width: 80%;
+  gap: 0 100px;
+}
+
+.about .text {
+  flex: 1;
+  /* Text takes up available space */
+  flex-wrap: wrap;
+  /* Gör så att bilderna radbryts vid mindre skärmar */
+
+}
 
 .text .hello {
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: 0.8rem;
-      }
-      
-
-      .about .text p {
-        font-size: 1rem;
-        line-height: 20px;
-        color: #2E2A2A;
-        font-family: "lft-etica-mono", sans-serif;
-        font-weight: 400;
-      }
-
-      .about-image {
-        flex: 1; /* Image takes up available space */
-        max-width: 50%;
-      }
-      
-      .about-image img {
-        width: 60%;
-        height: auto;
-
-      }
-
-            /* Responsiv design för mindre skärmar */
-            @media (max-width: 768px) {
-                .container {
-                  flex-direction: column; /* Byt till kolumnlayout på mindre skärmar */
-                  text-align: center; /* Centrera texten */
-                }
-              
-                .text {
-                  max-width: 100%; /* Texten ska ta upp hela bredden */
-                  margin-bottom: 1.5rem;
-                }
-              
-                .image {
-                  max-width: 100%; /* Bilden ska ta upp hela bredden */
-                }
-              }
-
-              /*Contact*/ 
-
-      .contact {
-        background-color: #F9F9F6;
-        text-align: left;
-        padding-left: 9rem;
-        margin: 4rem 0;
-      }
-      .contact h2 {
-        font-family: "urbane", sans-serif;
-        font-weight: bold;
-        color: #2E2A2A;
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-      }
-
-      .contact h3 {
-        font-family: "basic-sans", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        margin-bottom: 20px;
-      }
-
-      .contact li {
-        list-style: none;
-        margin-bottom: 10px;
-      }
-
-      .contact ul li a {
-        color: #2E2A2A;
-      }
-
-      .fa-solid {
-        color: #2E2A2A;
-        margin-right: 10px;
-      }
-
-
-      /*Projects*/
-
-
-.ui-section {
-    background-color: #F9F9F6;
-    padding: 4rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
 }
 
-.ui {
-    max-width: 1200px; /* Maxbredd för sektionen */
-    margin: 0 auto; /* Centrerar sektionen på sidan */
+
+.about .text p {
+  font-size: 1rem;
+  line-height: 20px;
+  color: #2E2A2A;
+  font-family: "lft-etica-mono", sans-serif;
+  font-weight: 400;
+}
+
+
+.about-image img {
+  width: 300px;
+  height: auto;
 
 }
 
-.ui h2 {
-    font-family: "lft-etica-mono", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #2E2A2A;
-    text-align: left;
-    margin-bottom: 2rem; /* Avstånd mellan rubrik och bilder */
-    padding-left: 0; /*Gör rubriken i linje med första bilden*/
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Byt till kolumnlayout på mindre skärmar */
+  }
+
+  .text {
+    max-width: 100%;
+    /* Texten ska ta upp hela bredden */
+    margin-bottom: 1.5rem;
+  }
+
+  .image {
+    max-width: 100%;
+    /* Bilden ska ta upp hela bredden */
+
+  }
 }
 
-/* Behåll bilderna och texten på rad */
-.ui-image-container {
-    display: flex;
-    flex-wrap: wrap; /* Gör så att bilderna radbryts vid mindre skärmar */
-    gap: 2rem; /* Utrymme mellan bilderna */
-    max-width: 1200px;
-    margin: 0 auto; /* Centrerar hela container */
+/*Contact*/
+
+.contact .container {
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact {
+  background-color: #F9F9F6;
+  text-align: left;
+
+
+}
+
+.contact h2 {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+
+
+.contact h3 {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.contact li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.contact ul li a {
+  color: #2E2A2A;
+}
+
+.fa-solid {
+  color: #2E2A2A;
+  margin-right: 10px;
+}
+
+.connect li :hover {
+  color: #FF9900;
 }
 
 
 
 
+/*Projects*/
 
+/* UI-sektionen */
+.ui-projects-container {
+  width: 80%;
+  margin: 0 auto;
+  /* Centrerar sektionen på sidan */
+}
 
+.ui-projects-header {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 2rem 0;
+  color: #2E2A2A;
+}
 
+.ui-projects-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
 
+.ui-project-item {
+  flex: 1;
+  text-align: left;
+}
 
+.ui-project-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
 
+.ui-project-title {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 1.2rem;
+}
 
-      
+.ui-year {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 0.9rem;
+}
 
+.ui-project-description {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  color: #2E2A2A;
+}
 
+/* Media Query för mindre skärm */
+@media (max-width: 768px) {
+  .ui-projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 
-      
-    
+  .ui-project-item {
+    width: 100%;
+  }
 
-      
+  .ui-project-image {
+    width: 90%;
+    height: auto;
+  }
 
-      
+  .ui-project-title {
+    font-size: 1rem;
+  }
+}
 
+/* Branding-sektionen */
+.branding-project-container {
+  width: 80%; /* Samma bredd som UI-sektionen */
+  margin: 0 auto; /* Centrerar sektionen på sidan */
+  margin-top: 5rem;
+}
 
+.branding-projects-header {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 2rem 0;
+  color: #2E2A2A;
+}
 
+.branding-project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%; /* För att använda hela bredden */
+  max-width: 32%; /* Gör att varje branding-projekt inte blir större än detta */
+  box-sizing: border-box; /* Säkerställer korrekt padding */
+  margin-bottom: 20px; /* Lägg till samma avstånd som UI-sektionen */
+}
 
+.branding-project-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
 
+.branding-project-title {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 1.2rem;
+}
 
+.branding-year {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 0.9rem;
+}
 
+.branding-project-description {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  color: #2E2A2A;
+}
 
+/* Media Query för mindre skärm */
+@media (max-width: 768px) {
+  .branding-project-container {
+    width: 80%;
+    margin: 0 auto;
+  }
 
+  .branding-project-item {
+    width: 100%;
+    max-width: 100%; /* Ser till att varje projekt tar upp hela bredden på skärmen */
+    margin-bottom: 20px;
+  }
 
+  .branding-project-image {
+    width: 90%; /* Gör bilderna i branding till 90% */
+    height: auto;
+  }
 
+  .branding-project-title {
+    font-size: 1rem;
+  }
 
+  .branding-project-description {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+}
 
+/* Linje mellan sektionerna */
+.line {
+  border: 0;
+  height: 2px;
+  background-color: #2E2A2A;
+  width: 40%;
+  margin: auto;
+}
 
+/*Graphic Design*/
+.graphic-projects-container {
+  width: 80%;
+  margin: 0 auto;
+  /* Centrerar sektionen på sidan */
+  margin-top: 5rem;
+}
 
+.graphic-projects-header {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 2rem 0;
+  color: #2E2A2A;
+}
 
+.graphic-projects-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
 
+.graphic-project-item {
+  flex: 1;
+  text-align: left;
+}
 
+.graphic-project-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
 
+.graphic-project-title {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 1.2rem;
+}
 
+.graphic-year {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 0.9rem;
+}
 
+.graphic-project-description {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  color: #2E2A2A;
+}
 
+/* Media Query för mindre skärm */
+@media (max-width: 768px) {
+  .graphic-projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .graphic-project-item {
+    width: 100%;
+  }
 
+  .graphic-project-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .graphic-project-title {
+    font-size: 1rem;
+  }
+}
+
+/*Web Design*/
+.web-projects-container {
+  width: 80%;
+  margin: 0 auto;
+  /* Centrerar sektionen på sidan */
+  margin-top: 5rem;
+}
+
+.web-projects-header {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 2rem 0;
+  color: #2E2A2A;
+}
+
+.web-projects-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.web-project-item {
+  flex: 1;
+  text-align: left;
+}
+
+.web-project-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.web-project-title {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 1.2rem;
+}
+
+.web-year {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 0.9rem;
+}
+
+.web-project-description {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  color: #2E2A2A;
+}
+
+/* Media Query för mindre skärm */
+@media (max-width: 768px) {
+  .web-projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .web-project-item {
+    width: 100%;
+  }
+
+  .web-project-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .web-project-title {
+    font-size: 1rem;
+  }
+}
 
