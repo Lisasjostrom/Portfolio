@@ -10,6 +10,11 @@ body {
   margin: 0;
 }
 
+main {
+  background-color: #F9F9F6;
+}
+
+
 
 /* Rörlig Navbar */
 .navbar-animate {
@@ -241,7 +246,8 @@ body {
 
 /* Sektion 2*/
 .section-2 {
-  padding: 6rem 0;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
   background-color: #2E2A2A;
   /* Svart/grå bakgrund */
 }
@@ -454,237 +460,47 @@ button:active {
 }
 
 
-/*Footer*/
-
-footer {
-  background-color: #2E2A2A;
-  padding: 20px;
-  text-align: left;
-  /* Lägg till för att vänsterjustera all text i footern */
-}
-
-footer h2 {
-  font-family: "urbane", sans-serif;
-  color: #F9F9F6;
-  /* Textfärg */
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.footer-row {
-  display: flex;
-  justify-content: flex-start;
-  /* Vänsterjustera alla element på varje rad */
-  margin-bottom: 10px;
-}
-
-.footer-left {
-  width: 20%;
-}
-
-.footer-left h3 {
-  margin-bottom: 20px;
-  font-family: "basic-sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 1rem;
-  color: #F9F9F6;
-}
-
-footer ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-footer ul li {
-  margin-bottom: 5px;
-}
-
-footer ul li a {
-  text-decoration: none;
-  color: #F9F9F6;
-  font-family: "basic-sans", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  display: inline-block;
-  /* Gör länkarna till block så att de kan flyttas */
-  transition: transform 0.3s ease, color 0.3s ease;
-  /* Lägg till en övergång för att göra effekten smidig */
-}
-
-/* Hover-effekt */
-footer ul li a:hover {
-  transform: translateX(10px);
-  /* Flytta länken 10px åt höger */
-  color: #FF9900;
-  /* Ändra färg vid hover */
-}
-
-.social-links {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-
-
-.copy {
-  color: #F9F9F6;
-  font-family: "basic-sans", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  margin-top: 30px;
-  font-size: 1rem;
-
-}
-
-.social-links {
-  line-height: 6px;
-}
-
-.footer-left {
-  line-height: 15px;
-}
-
-
-
-/*About*/
-
-.about-heading {
-  font-size: 3rem;
-  font-family: "urbane", sans-serif;
-  color: #F9F9F6;
-  background-color: #2E2A2A;
-  padding: 2rem 3rem;
-}
-
-.about {
-  padding: 1rem;
-  background-color: #F9F9F6;
-  text-align: center;
-}
-
-
-.about h2 {
-  font-family: "urbane", sans-serif;
-  font-weight: bold;
-  color: #2E2A2A;
-  font-size: 2rem;
-  margin-bottom: 3rem;
-}
-
-
-.about .container {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 3rem;
-  width: 80%;
-  gap: 0 100px;
-}
-
-.about .text {
-  flex: 1;
-  /* Text takes up available space */
-  flex-wrap: wrap;
-  /* Gör så att bilderna radbryts vid mindre skärmar */
-
-}
-
-.text .hello {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.8rem;
-}
-
-
-.about .text p {
-  font-size: 1rem;
-  line-height: 20px;
-  color: #2E2A2A;
-  font-family: "lft-etica-mono", sans-serif;
-  font-weight: 400;
-}
-
-
-.about-image img {
-  width: 300px;
-  height: auto;
-
-}
-
-/* Responsiv design för mindre skärmar */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    /* Byt till kolumnlayout på mindre skärmar */
-  }
-
-  .text {
-    max-width: 100%;
-    /* Texten ska ta upp hela bredden */
-    margin-bottom: 1.5rem;
-  }
-
-  .image {
-    max-width: 100%;
-    /* Bilden ska ta upp hela bredden */
-
-  }
-}
-
-/*Contact*/
-
-.contact .container {
-  flex-direction: column;
-  text-align: left;
-}
-
-.contact {
-  background-color: #F9F9F6;
-  text-align: left;
-
-
-}
-
-.contact h2 {
-  font-family: "urbane", sans-serif;
-  font-weight: bold;
-  color: #2E2A2A;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-
-
-.contact h3 {
-  font-family: "basic-sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-bottom: 20px;
-}
-
-.contact li {
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-.contact ul li a {
-  color: #2E2A2A;
-}
-
-.fa-solid {
-  color: #2E2A2A;
-  margin-right: 10px;
-}
-
-.connect li :hover {
-  color: #FF9900;
-}
 
 
 
 
 /*Projects*/
+
+/*Navbar-Projects*/
+/* Navbar för projekt */
+.navbar-projects {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.navbar-projects-list {
+  list-style: none;
+  display: flex;
+  gap: 50px; /* Sätter avstånd mellan varje länk */
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-projects-link {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: #2E2A2A;
+  display: inline-block; /* Gör att länken beter sig som en block, vilket behövs för transformering */
+  transition: transform 0.3s ease; /* Lägg till transition för att effekten ska vara smidig */
+}
+
+.navbar-projects-link:hover {
+  color: #AF9D8F; /* Förändra färgen vid hover */
+  transform: translateY(5px); /* Länken hoppar ner 5px när man hovrar */
+}
+
+
+
+
 
 /* UI-sektionen */
 .ui-projects-container {
@@ -764,8 +580,10 @@ footer ul li a:hover {
 
 /* Branding-sektionen */
 .branding-project-container {
-  width: 80%; /* Samma bredd som UI-sektionen */
-  margin: 0 auto; /* Centrerar sektionen på sidan */
+  width: 80%;
+  /* Samma bredd som UI-sektionen */
+  margin: 0 auto;
+  /* Centrerar sektionen på sidan */
   margin-top: 5rem;
 }
 
@@ -781,10 +599,14 @@ footer ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%; /* För att använda hela bredden */
-  max-width: 32%; /* Gör att varje branding-projekt inte blir större än detta */
-  box-sizing: border-box; /* Säkerställer korrekt padding */
-  margin-bottom: 20px; /* Lägg till samma avstånd som UI-sektionen */
+  width: 100%;
+  /* För att använda hela bredden */
+  max-width: 32%;
+  /* Gör att varje branding-projekt inte blir större än detta */
+  box-sizing: border-box;
+  /* Säkerställer korrekt padding */
+  margin-bottom: 20px;
+  /* Lägg till samma avstånd som UI-sektionen */
 }
 
 .branding-project-image {
@@ -825,12 +647,14 @@ footer ul li a:hover {
 
   .branding-project-item {
     width: 100%;
-    max-width: 100%; /* Ser till att varje projekt tar upp hela bredden på skärmen */
+    max-width: 100%;
+    /* Ser till att varje projekt tar upp hela bredden på skärmen */
     margin-bottom: 20px;
   }
 
   .branding-project-image {
-    width: 90%; /* Gör bilderna i branding till 90% */
+    width: 90%;
+    /* Gör bilderna i branding till 90% */
     height: auto;
   }
 
@@ -844,14 +668,7 @@ footer ul li a:hover {
   }
 }
 
-/* Linje mellan sektionerna */
-.line {
-  border: 0;
-  height: 2px;
-  background-color: #2E2A2A;
-  width: 40%;
-  margin: auto;
-}
+
 
 /*Graphic Design*/
 .graphic-projects-container {
@@ -1007,3 +824,237 @@ footer ul li a:hover {
   }
 }
 
+/* Linje mellan sektionerna */
+.line {
+  border: 0;
+  height: 2px;
+  background-color: #2E2A2A;
+  width: 40%;
+  margin: auto;
+}
+
+/*About*/
+
+.about-heading {
+  font-size: 3rem;
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  background-color: #2E2A2A;
+  padding: 2rem 3rem;
+}
+
+.about {
+  padding: 1rem;
+  background-color: #F9F9F6;
+  text-align: center;
+}
+
+
+.about h2 {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+
+.about .container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 3rem;
+  width: 80%;
+  gap: 0 100px;
+}
+
+.about .text {
+  flex: 1;
+  /* Text takes up available space */
+  flex-wrap: wrap;
+  /* Gör så att bilderna radbryts vid mindre skärmar */
+
+}
+
+.text .hello {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+
+.about .text p {
+  font-size: 1rem;
+  line-height: 20px;
+  color: #2E2A2A;
+  font-family: "lft-etica-mono", sans-serif;
+  font-weight: 400;
+}
+
+
+.about-image img {
+  width: 300px;
+  height: auto;
+
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Byt till kolumnlayout på mindre skärmar */
+  }
+
+  .text {
+    max-width: 100%;
+    /* Texten ska ta upp hela bredden */
+    margin-bottom: 1.5rem;
+  }
+
+  .image {
+    max-width: 100%;
+    /* Bilden ska ta upp hela bredden */
+
+  }
+}
+
+/*Contact*/
+
+.contact .container {
+  flex-direction: column;
+  text-align: left;
+}
+
+.contact {
+  background-color: #F9F9F6;
+  text-align: left;
+
+
+}
+
+.contact h2 {
+  font-family: "urbane", sans-serif;
+  font-weight: bold;
+  color: #2E2A2A;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+
+
+.contact h3 {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.contact li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.contact ul li a {
+  color: #2E2A2A;
+}
+
+.fa-solid {
+  color: #2E2A2A;
+  margin-right: 10px;
+}
+
+.connect li :hover {
+  color: #FF9900;
+}
+
+
+/*Footer*/
+
+footer {
+  background-color: #2E2A2A;
+  padding: 20px;
+  text-align: left;
+  /* Lägg till för att vänsterjustera all text i footern */
+}
+
+footer h2 {
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  /* Textfärg */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: flex-start;
+  /* Vänsterjustera alla element på varje rad */
+  margin-bottom: 10px;
+}
+
+.footer-left {
+  width: 20%;
+}
+
+.footer-left h3 {
+  margin-bottom: 20px;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1rem;
+  color: #F9F9F6;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #F9F9F6;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  display: inline-block;
+  /* Gör länkarna till block så att de kan flyttas */
+  transition: transform 0.3s ease, color 0.3s ease;
+  /* Lägg till en övergång för att göra effekten smidig */
+}
+
+/* Hover-effekt */
+footer ul li a:hover {
+  transform: translateX(10px);
+  /* Flytta länken 10px åt höger */
+  color: #FF9900;
+  /* Ändra färg vid hover */
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+
+.copy {
+  color: #F9F9F6;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  margin-top: 30px;
+  font-size: 1rem;
+
+}
+
+.social-links {
+  line-height: 6px;
+}
+
+.footer-left {
+  line-height: 15px;
+}

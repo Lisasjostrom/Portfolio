@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,14 @@
     <link rel="stylesheet" href="https://use.typekit.net/msw3hrg.css">
     <link rel="stylesheet" href="https://use.typekit.net/msw3hrg.css">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQ6iQ2hK0RlTbMmS6SW+3Vmx1vZfsbNgEuu/sIhAHVEryT8UHVH9L8z6A" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQ6iQ2hK0RlTbMmS6SW+3Vmx1vZfsbNgEuu/sIhAHVEryT8UHVH9L8z6A" crossorigin="anonymous">
     <!-- Bootstrap JavaScript (inkluderar Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-AE+afZF7QnnU6gbmQftG4wqWbhMkmj+Xdktlu2l3kxwBRFzJj9EhjEmhs4AiP6WI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-AE+afZF7QnnU6gbmQftG4wqWbhMkmj+Xdktlu2l3kxwBRFzJj9EhjEmhs4AiP6WI"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav class="navbar">
         <ul>
@@ -22,28 +27,42 @@
             <li><a href="projects.html" class="nav-link active">Projects</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
         </ul>
-</nav>
-<header>
-    <h1 class="about-heading">Projects.</h1>
-</header>
+    </nav>
+    <header>
+        <h1 class="about-heading">Projects.</h1>
+    </header>
     <main>
-        <section class="ui-projects-container">
+
+
+        <nav class="navbar-projects">
+            <ul class="navbar-projects-list">
+                <li><a href="#ui-design" class="navbar-projects-link">UI Design</a></li>
+                <li><a href="#branding" class="navbar-projects-link">Branding</a></li>
+                <li><a href="#graphic-design" class="navbar-projects-link">Graphic Design</a></li>
+                <li><a href="#web-design" class="navbar-projects-link">Web Design</a></li>
+            </ul>
+        </nav>
+
+
+
+
+        <section id="ui-design" class="ui-projects-container">
             <h2 class="ui-projects-header">UI Design [3]</h2>
             <div class="ui-projects-grid">
                 <div class="ui-project-item">
-                    <img src="../Images/savant.jpg" alt="Project 1" class="ui-project-image">
+                    <img src="../Images/kulturkompassen.jpg" alt="Project 1" class="ui-project-image">
                     <h3 class="ui-project-title">Kulturkompassen</h3>
                     <p class="ui-year">2024</p>
                     <p class="ui-project-description">This is a brief description of the first UI project.</p>
                 </div>
                 <div class="ui-project-item">
-                    <img src="../Images/savant.jpg" alt="Project 2" class="ui-project-image">
+                    <img src="../Images/winteime.jpg" alt="Project 2" class="ui-project-image">
                     <h3 class="ui-project-title">WinteTime</h3>
                     <p class="ui-year">2024</p>
                     <p class="ui-project-description">This is a brief description of the second UI project.</p>
                 </div>
                 <div class="ui-project-item">
-                    <img src="../Images/savant.jpg" alt="Project 3" class="ui-project-image">
+                    <img src="../Images/zara.jpg" alt="Project 3" class="ui-project-image">
                     <h3 class="ui-project-title">ZARA</h3>
                     <p class="ui-year">2023</p>
                     <p class="ui-project-description">This is a brief description of the third UI project.</p>
@@ -54,35 +73,36 @@
         <hr class="line">
 
 
-        <section class="branding-project-container">
+        <section id="branding" class="branding-project-container">
             <h2 class="branding-projects-header">Branding [1]</h2>
             <div class="branding-project-item">
-                <img src="../Images/savant.jpg" alt="Single Project" class="branding-project-image">
+                <img src="../Images/savant-kopp1.jpg" alt="Single Project" class="branding-project-image">
                 <h3 class="branding-project-title">New Project Title</h3>
                 <p class="branding-year">2024</p>
-                <p class="branding-project-description">This is a detailed description of the branding project. You can elaborate on the features, design choices, and any other relevant information about the project.</p>
+                <p class="branding-project-description">This is a detailed description of the branding project. You can
+                    elaborate on the features, design choices, and any other relevant information about the project.</p>
             </div>
         </section>
 
         <hr class="line">
 
-        <section class="graphic-projects-container">
+        <section id="graphic-design" class="graphic-projects-container">
             <h2 class="graphic-projects-header">Graphic Design [3]</h2>
             <div class="graphic-projects-grid">
                 <div class="graphic-project-item">
-                    <img src="../Images/savant.jpg" alt="Project 1" class="ui-project-image">
+                    <img src="../Images/savant-visitkort.jpg" alt="Project 1" class="ui-project-image">
                     <h3 class="graphic-project-title">Kulturkompassen</h3>
                     <p class="graphic-year">2024</p>
                     <p class="graphic-project-description">This is a brief description of the first UI project.</p>
                 </div>
                 <div class="graphic-project-item">
-                    <img src="../Images/savant.jpg" alt="Project 2" class="ui-project-image">
+                    <img src="../Images/baskerville.jpg" alt="Project 2" class="ui-project-image">
                     <h3 class="graphic-project-title">WinteTime</h3>
                     <p class="graphic-year">2024</p>
                     <p class="graphic-project-description">This is a brief description of the second UI project.</p>
                 </div>
                 <div class="graphic-project-item">
-                    <img src="../Images/savant.jpg" alt="Project 2" class="ui-project-image">
+                    <img src="../Images/illustrator.jpg" alt="Project 2" class="ui-project-image">
                     <h3 class="graphic-project-title">WinteTime</h3>
                     <p class="graphic-year">2024</p>
                     <p class="graphic-project-description">This is a brief description of the second UI project.</p>
@@ -94,22 +114,22 @@
         <hr class="line">
 
         <section class="web-projects-container">
-            <h2 class="web-projects-header">Web Design [3]</h2>
+            <h2 id="web-design" class="web-projects-header">Web Design [3]</h2>
             <div class="web-projects-grid">
                 <div class="web-project-item">
-                    <img src="../Images/savant.jpg" alt="Project 1" class="ui-project-image">
+                    <img src="../Images/plugg2.jpg" alt="Project 1" class="ui-project-image">
                     <h3 class="web-project-title">Pluggportalen</h3>
                     <p class="web-year">2024</p>
                     <p class="web-project-description">This is a brief description of the first UI project.</p>
                 </div>
                 <div class="web-project-item">
-                    <img src="../Images/savant.jpg" alt="Project 2" class="ui-project-image">
+                    <img src="../Images/furuskog.jpg" alt="Project 2" class="ui-project-image">
                     <h3 class="web-project-title">Svenska Vilddjur</h3>
                     <p class="web-year">2023</p>
                     <p class="web-project-description">This is a brief description of the second UI project.</p>
                 </div>
                 <div class="web-project-item">
-                    <img src="../Images/savant.jpg" alt="Project 2" class="ui-project-image">
+                    <img src="../Images/vildadjur.jpg" alt="Project 2" class="ui-project-image">
                     <h3 class="web-project-title">Furuskogs Hunddagis</h3>
                     <p class="web-year">2023</p>
                     <p class="web-project-description">This is a brief description of the second UI project.</p>
@@ -117,52 +137,39 @@
             </div>
         </section>
 
-
-
-        
-
-        
-
-
-
-
-
-    
-        
-        
-       
-
     </main>
+
     <footer>
         <div class="footer-row">
             <h2>more.</h2>
-          </div>
-          <div class="footer-row">
+        </div>
+        <div class="footer-row">
             <div class="footer-left">
-              <h3>SITEMAP</h3>
-              <ul>
-                <li><a href="#start">START</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#about">ABOUT</a></li>
-              </ul>
+                <h3>SITEMAP</h3>
+                <ul>
+                    <li><a href="#start">START</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
             </div>
             <div class="footer-left">
-              <h3>SOCIALS</h3>
-              <ul class="social-links">
-                <li><a href="#">INSTAGRAM</a></li>
-                <li><a href="#">FACEBOOK</a></li>
-                <li><a href="#">BEHANCE</a></li>
-                <li><a href="#">LINKEDIN</a></li>
-                <li><a href="#">PINTEREST</a></li>
-                <li><a href="#">TWITTER</a></li>
-              </ul>
+                <h3>SOCIALS</h3>
+                <ul class="social-links">
+                    <li><a href="#">INSTAGRAM</a></li>
+                    <li><a href="#">FACEBOOK</a></li>
+                    <li><a href="#">BEHANCE</a></li>
+                    <li><a href="#">LINKEDIN</a></li>
+                    <li><a href="#">PINTEREST</a></li>
+                    <li><a href="#">TWITTER</a></li>
+                </ul>
             </div>
-          </div>
-          <div class="footer-row">
-              <p class="copy">&copy; 2024 <br> Coded and designed by Lisa Sjöström</p>
-      
-          </div>
+        </div>
+        <div class="footer-row">
+            <p class="copy">&copy; 2024 <br> Coded and designed by Lisa Sjöström</p>
+
+        </div>
 
     </footer>
 </body>
+
 </html>
