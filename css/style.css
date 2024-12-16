@@ -14,10 +14,16 @@ main {
   background-color: #F9F9F6;
 }
 
-:target {
-  padding-top: 150px;  /* Justera efter storleken på din header */
-  margin-top: -100px;   /* Kompenserar för headerns höjd */
+/* För sektionerna som ska scrollas till */
+section:target {
+  padding-top: 80px;  /* Justera beroende på höjd på din navbar */
+  margin-top: -80px;  /* Kompenserar för navbarens höjd */
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 
 
@@ -307,8 +313,8 @@ p.additional-text {
 }
 
 /* Stil på knappen */
-
-button {
+/* Gör länken som en knapp */
+.button {
   font-family: "lft-etica-mono", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -320,24 +326,21 @@ button {
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.3s ease;
-  /* Smidig övergång */
+  text-decoration: none; /* Ta bort understrykning */
+  display: inline-block; /* Gör att den beter sig som en knapp */
 }
 
-button:hover {
+.button:hover {
   background-color: #c6c4c4;
-  /* Ljusare färg */
-  transform: translateY(3px);
-  /* Simulerar att knappen trycks ner */
+  transform: translateY(3px);  /* För att skapa nedtryckseffekt */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  /* Minskar skuggan */
 }
 
-button:active {
+.button:active {
   transform: translateY(5px);
-  /* Trycks ner ännu mer när man klickar */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  /* Nästan ingen skugga */
 }
+
 
 
 /* Responsiv design - Bild och text staplas vid mindre skärmar */
@@ -590,6 +593,7 @@ button:active {
   margin: 0 auto;
   /* Centrerar sektionen på sidan */
   margin-top: 5rem;
+
 }
 
 .branding-projects-header {
@@ -832,8 +836,8 @@ button:active {
 /* Linje mellan sektionerna */
 .line {
   border: 0;
-  height: 2px;
-  background-color: #2E2A2A;
+  height: 1px;
+  background-color: #AF9D8F;
   width: 40%;
   margin: auto;
 }
@@ -1063,4 +1067,5 @@ footer ul li a:hover {
 .footer-left {
   line-height: 15px;
 }
+
 
