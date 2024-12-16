@@ -534,6 +534,8 @@ p.additional-text {
 .ui-project-item {
   flex: 1;
   text-align: left;
+  background-color: #2E2A2A;
+  padding: 1rem;
 }
 
 .ui-project-image {
@@ -544,15 +546,15 @@ p.additional-text {
 
 .ui-project-title {
   font-family: "urbane", sans-serif;
-  font-weight: bold;
-  color: #2E2A2A;
-  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F9F9F6;
+  font-size: 1rem;
 }
 
 .ui-year {
   font-family: "urbane", sans-serif;
-  font-weight: bold;
-  color: #2E2A2A;
+  font-weight: 400;
+  color: #F9F9F6;
   font-size: 0.9rem;
 }
 
@@ -561,8 +563,7 @@ p.additional-text {
   font-size: 1rem;
   font-weight: 300;
   margin-top: 2rem;
-  margin-bottom: 5rem;
-  color: #2E2A2A;
+  color: #F9F9F6;
 }
 
 /* Media Query för mindre skärm */
@@ -616,6 +617,8 @@ p.additional-text {
   /* Säkerställer korrekt padding */
   margin-bottom: 20px;
   /* Lägg till samma avstånd som UI-sektionen */
+  background-color: #2E2A2A;
+  padding: 1rem;
 }
 
 .branding-project-image {
@@ -626,15 +629,15 @@ p.additional-text {
 
 .branding-project-title {
   font-family: "urbane", sans-serif;
-  font-weight: bold;
-  color: #2E2A2A;
-  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F9F9F6;
+  font-size: 1rem;
 }
 
 .branding-year {
   font-family: "urbane", sans-serif;
-  font-weight: bold;
-  color: #2E2A2A;
+  font-weight: 400;
+  color: #F9F9F6;
   font-size: 0.9rem;
 }
 
@@ -643,8 +646,7 @@ p.additional-text {
   font-size: 1rem;
   font-weight: 300;
   margin-top: 2rem;
-  margin-bottom: 5rem;
-  color: #2E2A2A;
+  color: #F9F9F6;
 }
 
 /* Media Query för mindre skärm */
@@ -704,6 +706,8 @@ p.additional-text {
 .graphic-project-item {
   flex: 1;
   text-align: left;
+  background-color: #2E2A2A;
+  padding: 1rem;
 }
 
 .graphic-project-image {
@@ -714,15 +718,15 @@ p.additional-text {
 
 .graphic-project-title {
   font-family: "urbane", sans-serif;
-  font-weight: bold;
-  color: #2E2A2A;
-  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F9F9F6;
+  font-size: 1rem;
 }
 
 .graphic-year {
   font-family: "urbane", sans-serif;
-  font-weight: bold;
-  color: #2E2A2A;
+  font-weight: 400;
+  color: #F9F9F6;
   font-size: 0.9rem;
 }
 
@@ -731,8 +735,7 @@ p.additional-text {
   font-size: 1rem;
   font-weight: 300;
   margin-top: 2rem;
-  margin-bottom: 5rem;
-  color: #2E2A2A;
+  color: #F9F9F6;
 }
 
 /* Media Query för mindre skärm */
@@ -762,6 +765,7 @@ p.additional-text {
   margin: 0 auto;
   /* Centrerar sektionen på sidan */
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .web-projects-header {
@@ -781,6 +785,8 @@ p.additional-text {
 .web-project-item {
   flex: 1;
   text-align: left;
+  background-color: #2E2A2A;
+  padding: 1rem;
 }
 
 .web-project-image {
@@ -791,15 +797,15 @@ p.additional-text {
 
 .web-project-title {
   font-family: "urbane", sans-serif;
-  font-weight: bold;
-  color: #2E2A2A;
-  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F9F9F6;
+  font-size: 1rem;
 }
 
 .web-year {
   font-family: "urbane", sans-serif;
-  font-weight: bold;
-  color: #2E2A2A;
+  font-weight: 400;
+  color: #F9F9F6;
   font-size: 0.9rem;
 }
 
@@ -808,8 +814,7 @@ p.additional-text {
   font-size: 1rem;
   font-weight: 300;
   margin-top: 2rem;
-  margin-bottom: 5rem;
-  color: #2E2A2A;
+  color: #F9F9F6;
 }
 
 /* Media Query för mindre skärm */
@@ -833,18 +838,10 @@ p.additional-text {
   }
 }
 
-/* Linje mellan sektionerna */
-.line {
-  border: 0;
-  height: 1px;
-  background-color: #AF9D8F;
-  width: 40%;
-  margin: auto;
-}
 
 /*About*/
 
-.about-heading {
+.about-heading, .projects-heading {
   font-size: 3rem;
   font-family: "urbane", sans-serif;
   color: #F9F9F6;
