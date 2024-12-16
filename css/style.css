@@ -11,91 +11,143 @@ body {
 }
 
 
-/*Start*/
-
-/*Navbar*/
-
-.navbar {
-    font-family: "lft-etica-mono", sans-serif;
-    font-weight: 200;
-    position: sticky;  /* Gör navbaren sticky */
-    top: 0;            /* Fastnar när den når toppen */
-    background-color: #2E2A2A; /* Sätt samma bakgrundsfärg som du har för din banner */
-    width: 100%;       /* Gör navbaren lika bred som skärmen */
-    z-index: 9999;     /* Ser till att navbaren ligger ovanpå annat innehåll */
-    padding: 1rem;
-    
+/* Rörlig Navbar */
+.navbar-animate {
+  font-family: "lft-etica-mono", sans-serif;
+  font-weight: 200;
+  position: sticky;  /* Gör navbaren sticky */
+  top: 0;            /* Fastnar när den når toppen */
+  background-color: #2E2A2A; /* Sätt samma bakgrundsfärg som du har för din banner */
+  width: 100%;       /* Gör navbaren lika bred som skärmen */
+  z-index: 9999;     /* Ser till att navbaren ligger ovanpå annat innehåll */
+  padding: 1rem;
 }
 
-
-.navbar ul {
-    list-style: none; /* Tar bort standard punktlista */
-    display: flex; /* Gör listan horisontell */
-    justify-content: center; /* Centrerar listan horisontellt */    
-    gap: 6rem; /* Ger utrymme mellan varje länk */
+.navbar-animate ul {
+  list-style: none; /* Tar bort standard punktlista */
+  display: flex; /* Gör listan horisontell */
+  justify-content: center; /* Centrerar listan horisontellt */    
+  gap: 6rem; /* Ger utrymme mellan varje länk */
 }
 
-.nav-link {
-    padding-bottom: 5px; /* Ger utrymme för strecket */
-    display: inline-block;
-    text-decoration: none;
-    color: #F9F9F6;
-    font-size: 1.2rem;
-    opacity: 0; /* Länkarna är osynliga i början */
-    transform: translateX(-20px); /* Börjar vänster om sin normala plats */
-    animation: slideIn 0.5s ease-out forwards; /* Animation för varje länk */
-    animation-delay: calc(0.5s * var(--index)); /* Fördröjning för varje länk, börjar från vänster */
+.nav-link-animate {
+  padding-bottom: 5px; /* Ger utrymme för strecket */
+  display: inline-block;
+  text-decoration: none;
+  color: #F9F9F6;
+  font-size: 1.2rem;
+  opacity: 0; /* Länkarna är osynliga i början */
+  transform: translateX(-20px); /* Börjar vänster om sin normala plats */
+  animation: slideIn 0.5s ease-out forwards; /* Animation för varje länk */
+  animation-delay: calc(0.5s * var(--index)); /* Fördröjning för varje länk, börjar från vänster */
 }
 
 /* Animation för att länkarna ska "segla in" från vänster */
 @keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
 }
 
 /* För att sätta index på varje länk */
-.navbar li:nth-child(1) {
-    --index: 1;
+.navbar-animate li:nth-child(1) {
+  --index: 1;
 }
 
-.navbar li:nth-child(2) {
-    --index: 2;
+.navbar-animate li:nth-child(2) {
+  --index: 2;
 }
 
-.navbar li:nth-child(3) {
-    --index: 3;
+.navbar-animate li:nth-child(3) {
+  --index: 3;
+}
+
+/* För hover-effekt med växande streck från vänster till höger */
+.nav-link-animate::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Tunn höjd för strecket vid hover */
+  background-color: #F9F9F6;
+  transition: width 0.3s ease; /* Gör att bredden växer från vänster */
+  border-radius: 3px; /* Runda kanter på strecket */
+}
+
+/* När användaren hovrar på en länk */
+.nav-link-animate:hover::before {
+  width: 100%; /* Strecket växer till 100% bredd */
+}
+
+/* För den aktiva länken (streck under "Start" när sidan laddas) */
+.nav-link-animate.active::before {
+  width: 100%; /* Se till att strecket under aktiv länk är fullt brett */
+  height: 2px; /* Gör strecket lika tunt som vid hover */
+  background-color: #AF9D8F;
+}
+
+/* Statisk Navbar */
+.navbar {
+  font-family: "lft-etica-mono", sans-serif;
+  font-weight: 200;
+  position: sticky;  /* Gör navbaren sticky */
+  top: 0;            /* Fastnar när den når toppen */
+  background-color: #2E2A2A; /* Sätt samma bakgrundsfärg som du har för din banner */
+  width: 100%;       /* Gör navbaren lika bred som skärmen */
+  z-index: 9999;     /* Ser till att navbaren ligger ovanpå annat innehåll */
+  padding: 1rem;
+}
+
+.navbar ul {
+  list-style: none; /* Tar bort standard punktlista */
+  display: flex; /* Gör listan horisontell */
+  justify-content: center; /* Centrerar listan horisontellt */    
+  gap: 6rem; /* Ger utrymme mellan varje länk */
+}
+
+.nav-link {
+  padding-bottom: 5px; /* Ger utrymme för strecket */
+  display: inline-block;
+  text-decoration: none;
+  color: #F9F9F6;
+  font-size: 1.2rem;
+  opacity: 1; /* Gör länkarna synliga direkt */
+  transform: translateX(0); /* Ta bort animationens vänsterskift */
+  /* Ingen animation för att länkarna ska vara statiska */
 }
 
 /* För hover-effekt med växande streck från vänster till höger */
 .nav-link::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px; /* Tunn höjd för strecket vid hover */
-    background-color: #F9F9F6;
-    transition: width 0.3s ease; /* Gör att bredden växer från vänster */
-    border-radius: 3px; /* Runda kanter på strecket */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; /* Tunn höjd för strecket vid hover */
+  background-color: #F9F9F6;
+  transition: width 0.3s ease; /* Gör att bredden växer från vänster */
+  border-radius: 3px; /* Runda kanter på strecket */
 }
 
 /* När användaren hovrar på en länk */
 .nav-link:hover::before {
-    width: 100%; /* Strecket växer till 100% bredd */
+  width: 100%; /* Strecket växer till 100% bredd */
 }
 
 /* För den aktiva länken (streck under "Start" när sidan laddas) */
 .nav-link.active::before {
-    width: 100%; /* Se till att strecket under aktiv länk är fullt brett */
-    height: 2px; /* Gör strecket lika tunt som vid hover */
-    background-color:#AF9D8F;
+  width: 100%; /* Se till att strecket under aktiv länk är fullt brett */
+  height: 2px; /* Gör strecket lika tunt som vid hover */
+  background-color: #AF9D8F;
 }
+
+/*Start*
 
 
 /*Banner*/
