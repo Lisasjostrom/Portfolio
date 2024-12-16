@@ -220,7 +220,7 @@ html {
   color: #F9F9F6;
   font-size: 12vw;
   /* Gör rubriken stor */
-  width: 100vw;
+  width: 100%;
   /* Tar upp hela skärmbredden */
   text-align: center;
   margin: 0;
@@ -291,7 +291,6 @@ html {
 .text h2,
 .text p {
   font-family: "lft-etica-mono", sans-serif;
-  font-weight: 500;
   font-style: normal;
   text-align: left;
   font-size: 1.4rem;
@@ -861,7 +860,7 @@ p.additional-text {
   font-weight: bold;
   color: #2E2A2A;
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -885,16 +884,15 @@ p.additional-text {
 .text .hello {
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.8;
 }
 
 
 .about .text p {
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 1.5rem;
   color: #2E2A2A;
   font-family: "lft-etica-mono", sans-serif;
-  font-weight: 400;
 }
 
 
