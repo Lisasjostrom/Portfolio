@@ -213,7 +213,7 @@ html {
 }
 
 .section-2 .image {
-  width: 45%;
+  width: 50%;
   height: auto;
   transition: all 0.3s ease;
 }
@@ -306,18 +306,16 @@ p.additional-text {
 }
 
 .recent-projects {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 0;
+padding: 2rem;
 }
 
 .recent-projects h2 {
   font-family: "urbane", sans-serif;
   color: #2E2A2A;
-  text-align: left;
+  text-align: center;
   margin-bottom: 2rem;
   padding-left: 0;
-  font-size: 1.5rem;
 }
 
 .image-container {
@@ -325,6 +323,8 @@ p.additional-text {
   gap: 2rem;
   margin: 0 auto;
   flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .image-item {
@@ -337,6 +337,15 @@ p.additional-text {
   height: auto;
   margin-bottom: 10px;
 }
+
+.image-link img {
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smidig övergång för effekterna */
+}
+
+.image-link:hover img {
+  transform: scale(1.03); /* Förstorar bilden vid hover */
+}
+
 
 .text-container {
   width: 100%;
@@ -365,6 +374,8 @@ p.additional-text {
   color: #2E2A2A;
   font-family: "lft-etica-mono", sans-serif;
 }
+
+
 
 /* Mediaquery */
 @media screen and (max-width: 768px) {
@@ -483,6 +494,18 @@ p.additional-text {
   height: auto;
   margin-bottom: 10px;
 }
+
+.ui-project-image {
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smidig övergång */
+}
+
+a:hover .ui-project-image {
+  transform: scale(1.03); /* Förstorar bilden vid hover */
+}
+
+
+
+
 
 .ui-project-title {
   font-family: "urbane", sans-serif;
