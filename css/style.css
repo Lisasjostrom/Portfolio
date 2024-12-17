@@ -1232,5 +1232,16 @@ p.introduction-text {
   color: #F9F9F6;
 }
 
+/*Section 8*/
+.section-8 {
+  display: flex;  /* Flexbox gör att bilderna ligger på rad */
+  padding: 3rem 7rem;  /* Padding runt hela raden */
+  margin: 0;
+}
+
+.solution {
+  height: auto;  /* Behåller bildens proportioner */
+}
+
 
 
