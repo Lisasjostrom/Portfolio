@@ -14,15 +14,11 @@ main {
   background-color: #F9F9F6;
 }
 
-/* För sektionerna som ska scrollas till */
-section:target {
-  padding-top: 80px;
-  margin-top: -80px;
-}
-
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Justera beroende på höjden på din navbar */
 }
+
 
 
 /* Navbars */
@@ -461,345 +457,7 @@ padding: 2rem;
 
 
 
-/* UI-sektionen */
-.ui-projects-container {
-  width: 80%;
-  margin: 0 auto;
-  /* Centrerar sektionen på sidan */
-}
 
-.ui-projects-header {
-  font-family: "lft-etica-mono", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin: 2rem 0;
-  color: #2E2A2A;
-}
-
-.ui-projects-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.ui-project-item {
-  flex: 1;
-  text-align: left;
-  background-color: #2E2A2A;
-  padding: 1rem;
-}
-
-.ui-project-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.ui-project-image {
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Smidig övergång */
-}
-
-a:hover .ui-project-image {
-  transform: scale(1.03); /* Förstorar bilden vid hover */
-}
-
-
-
-
-
-.ui-project-title {
-  font-family: "urbane", sans-serif;
-  font-weight: 600;
-  color: #F9F9F6;
-  font-size: 1rem;
-}
-
-.ui-year {
-  font-family: "urbane", sans-serif;
-  font-weight: 400;
-  color: #F9F9F6;
-  font-size: 0.9rem;
-}
-
-.ui-project-description {
-  font-family: "lft-etica-mono", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  margin-top: 2rem;
-  color: #F9F9F6;
-}
-
-/* Media Query för mindre skärm */
-@media (max-width: 768px) {
-  .ui-projects-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .ui-project-item {
-    width: 100%;
-  }
-
-  .ui-project-image {
-    width: 90%;
-    height: auto;
-  }
-
-  .ui-project-title {
-    font-size: 1rem;
-  }
-}
-
-/* Branding-sektionen */
-.branding-project-container {
-  width: 80%;
-  /* Samma bredd som UI-sektionen */
-  margin: 0 auto;
-  /* Centrerar sektionen på sidan */
-  margin-top: 5rem;
-
-}
-
-.branding-projects-header {
-  font-family: "lft-etica-mono", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin: 2rem 0;
-  color: #2E2A2A;
-}
-
-.branding-project-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  /* För att använda hela bredden */
-  max-width: 32%;
-  /* Gör att varje branding-projekt inte blir större än detta */
-  box-sizing: border-box;
-  /* Säkerställer korrekt padding */
-  margin-bottom: 20px;
-  /* Lägg till samma avstånd som UI-sektionen */
-  background-color: #2E2A2A;
-  padding: 1rem;
-}
-
-.branding-project-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.branding-project-title {
-  font-family: "urbane", sans-serif;
-  font-weight: 600;
-  color: #F9F9F6;
-  font-size: 1rem;
-}
-
-.branding-year {
-  font-family: "urbane", sans-serif;
-  font-weight: 400;
-  color: #F9F9F6;
-  font-size: 0.9rem;
-}
-
-.branding-project-description {
-  font-family: "lft-etica-mono", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  margin-top: 2rem;
-  color: #F9F9F6;
-}
-
-/* Media Query för mindre skärm */
-@media (max-width: 768px) {
-  .branding-project-container {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .branding-project-item {
-    width: 100%;
-    max-width: 100%;
-    /* Ser till att varje projekt tar upp hela bredden på skärmen */
-    margin-bottom: 20px;
-  }
-
-  .branding-project-image {
-    width: 90%;
-    /* Gör bilderna i branding till 90% */
-    height: auto;
-  }
-
-  .branding-project-title {
-    font-size: 1rem;
-  }
-
-  .branding-project-description {
-    font-size: 1rem;
-    margin: 1rem 0;
-  }
-}
-
-
-
-/*Graphic Design*/
-.graphic-projects-container {
-  width: 80%;
-  margin: 0 auto;
-  /* Centrerar sektionen på sidan */
-  margin-top: 5rem;
-}
-
-.graphic-projects-header {
-  font-family: "lft-etica-mono", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin: 2rem 0;
-  color: #2E2A2A;
-}
-
-.graphic-projects-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.graphic-project-item {
-  flex: 1;
-  text-align: left;
-  background-color: #2E2A2A;
-  padding: 1rem;
-}
-
-.graphic-project-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.graphic-project-title {
-  font-family: "urbane", sans-serif;
-  font-weight: 600;
-  color: #F9F9F6;
-  font-size: 1rem;
-}
-
-.graphic-year {
-  font-family: "urbane", sans-serif;
-  font-weight: 400;
-  color: #F9F9F6;
-  font-size: 0.9rem;
-}
-
-.graphic-project-description {
-  font-family: "lft-etica-mono", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  margin-top: 2rem;
-  color: #F9F9F6;
-}
-
-/* Media Query för mindre skärm */
-@media (max-width: 768px) {
-  .graphic-projects-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .graphic-project-item {
-    width: 100%;
-  }
-
-  .graphic-project-image {
-    width: 90%;
-    height: auto;
-  }
-
-  .graphic-project-title {
-    font-size: 1rem;
-  }
-}
-
-/*Web Design*/
-.web-projects-container {
-  width: 80%;
-  margin: 0 auto;
-  /* Centrerar sektionen på sidan */
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-.web-projects-header {
-  font-family: "lft-etica-mono", sans-serif;
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin: 2rem 0;
-  color: #2E2A2A;
-}
-
-.web-projects-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.web-project-item {
-  flex: 1;
-  text-align: left;
-  background-color: #2E2A2A;
-  padding: 1rem;
-}
-
-.web-project-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.web-project-title {
-  font-family: "urbane", sans-serif;
-  font-weight: 600;
-  color: #F9F9F6;
-  font-size: 1rem;
-}
-
-.web-year {
-  font-family: "urbane", sans-serif;
-  font-weight: 400;
-  color: #F9F9F6;
-  font-size: 0.9rem;
-}
-
-.web-project-description {
-  font-family: "lft-etica-mono", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  margin-top: 2rem;
-  color: #F9F9F6;
-}
-
-/* Media Query för mindre skärm */
-@media (max-width: 768px) {
-  .web-projects-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .web-project-item {
-    width: 100%;
-  }
-
-  .web-project-image {
-    width: 90%;
-    height: auto;
-  }
-
-  .web-project-title {
-    font-size: 1rem;
-  }
-}
 
 
 /*About page */
@@ -1548,4 +1206,172 @@ p.introduction-text {
 .to-top-link a:hover {
   color: #FF9900;
   /* Ändra textfärgen till orange vid hovring */
+}
+
+
+
+
+
+
+
+/* Projects */
+
+.projects {
+  width: 85%;
+  margin: 0 auto; /* Centrerar sektionen */
+  padding: 0 2rem;
+  background-color: #F9F9F6;
+}
+
+.project-category {
+  margin-bottom: 8rem;
+}
+
+.project-category h2 {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 2rem 0;
+  color: #2E2A2A;
+  text-align: left;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #F9F9F6;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smidig övergång */
+}
+
+/* När man hovrar på länken (a), förstora bilden */
+.project-item a:hover img {
+  transform: scale(1.03); /* Förstorar bilden vid hover */
+  opacity: 0.9; /* Gör bilden något genomskinlig vid hover (valfritt) */
+}
+
+
+.project-text h3 {
+  font-family: "urbane", sans-serif;
+  font-size: 1.2rem;
+  color: #2E2A2A;
+  text-align: left;
+}
+
+.project-text .year {
+  font-family: "urbane", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #2E2A2A;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.project-text p {
+  font-family: "lft-etica-mono", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #2E2A2A;
+  text-align: left;
+}
+
+/* Responsiv design för mindre skärmar (t.ex. mobiler och tablets) */
+
+/* Navbar-projects */
+@media screen and (max-width: 768px) {
+  .navbar-projects-list {
+      justify-content: space-between; /* Justera så att det finns ett jämnt avstånd mellan grupperna */
+      gap: 0.5rem; /* Öka avståndet mellan grupperna */
+  }
+
+  .navbar-projects-link {
+      padding: 0.8rem; /* Justera padding för bättre klickbarhet */
+      font-size: 1.1rem; /* Anpassa textstorlek för bättre läsbarhet */
+  }
+}
+
+/* För ännu mindre skärmar (t.ex. mobiler) */
+@media screen and (max-width: 480px) {
+  .navbar-projects {
+      padding: 0.8rem; /* Minska padding för små enheter */
+  }
+
+  .navbar-projects-link {
+      font-size: 1rem; /* Justera fontstorleken för mobiler */
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    background-color: #F9F9F6;
+  }
+
+  .projects {
+    width: 100%;
+    padding: 0 1rem; /* Minska padding på sidorna */
+  }
+
+
+  .project-grid {
+    grid-template-columns: 1fr; /* En kolumn per rad för alla projekt */
+  }
+
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F9F6;
+    padding: 1rem;
+  }
+
+  .project-category h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-text h3 {
+    font-size: 1rem;
+  }
+
+  .project-text .year {
+    font-size: 0.9rem;
+  }
+
+  .project-text p {
+    font-size: 0.9rem;
+  }
+
+  /* Anpassa Branding-sektionen */
+  #branding .project-grid {
+    grid-template-columns: 1fr; /* Gör om till en kolumn för branding */
+  }
+
+  /* Dölj tomma kolumner i Branding-sektionen */
+  #branding .project-item:nth-child(2),
+  #branding .project-item:nth-child(3) {
+    display: none;
+  }
+
+  /* För UI Design-sektionen */
+  .project-item a:hover img {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  
 }
