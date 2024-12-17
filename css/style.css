@@ -475,6 +475,7 @@ p.additional-text {
 
 /*Navbar-Projects*/
 /* Navbar för projekt */
+
 .navbar-projects {
   display: flex;
   justify-content: center;
@@ -1065,6 +1066,10 @@ footer ul li a:hover {
 
 /*Case*/
 
+a {
+  text-decoration: none;
+}
+
 .case-container {
   display: flex;
   align-items: center;
@@ -1075,6 +1080,8 @@ footer ul li a:hover {
 .case-text {
   width: 60%;
 }
+
+
 
 .case-heading {
   font-size: 2rem;
@@ -1102,6 +1109,9 @@ p.introduction-text {
   color: #F9F9F6;
   gap: 6rem;
 }
+
+
+
 
 .case-small-texts p {
   font-size: 14px;
