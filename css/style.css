@@ -885,7 +885,7 @@ p.additional-text {
 .text .hello {
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.8;
+  margin-bottom: 0.8rem;
 }
 
 
@@ -961,6 +961,8 @@ p.additional-text {
 
 .contact ul li a {
   color: #2E2A2A;
+  display: inline-block; /* Gör att länkarna beter sig som block så att de kan flyttas */
+  transition: transform 0.3s ease, color 0.3s ease; /* Gör effekten smidig */
 }
 
 .fa-solid {
@@ -970,6 +972,8 @@ p.additional-text {
 
 .connect li :hover {
   color: #FF9900;
+  transform: translateX(10px); /* Flytta länken 10px åt höger */
+
 }
 
 
@@ -977,7 +981,7 @@ p.additional-text {
 
 footer {
   background-color: #2E2A2A;
-  padding: 20px;
+  padding: 1rem 3rem;
   text-align: left;
   /* Lägg till för att vänsterjustera all text i footern */
 }
@@ -1066,26 +1070,30 @@ footer ul li a:hover {
 
 /*Case*/
 
-a {
-  text-decoration: none;
+/* Case Container */
+
+header a {
+  text-decoration: none;  /* Tar bort understrykning från länken */
 }
 
+
 .case-container {
+  margin-top: 1px;
   display: flex;
   align-items: center;
   background-color: #2E2A2A;
-  margin-top: 1px;
+  padding-left: 7rem;  
+  box-sizing: border-box; /* Säkerställer att padding inte påverkar bredden */
 }
 
+/* Text Section */
 .case-text {
   width: 60%;
 }
 
-
-
 .case-heading {
   font-size: 2rem;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.1em;
   color: #F9F9F6;
   font-family: "urbane", sans-serif;
 }
@@ -1095,6 +1103,7 @@ a {
   color: #F9F9F6;
   font-family: "urbane", sans-serif;
   margin-bottom: 2rem;
+  line-height: 1.5rem;
 }
 
 p.introduction-text {
@@ -1102,26 +1111,86 @@ p.introduction-text {
   font-weight: 200;
 }
 
+/* Small Texts Section */
 .case-small-texts {
   display: flex;
-  gap: 20px; /* Lägger mellanrum mellan texterna */
-  margin-top: 20px; /* Ger lite utrymme över de små texterna */
-  color: #F9F9F6;
-  gap: 6rem;
+  gap: 7rem;
 }
 
+.case-small-texts div {
+  display: flex;
+  flex-direction: column;
+}
 
-
+.case-small-texts h5 {
+  font-family: "urbane", sans-serif;
+  font-size: 1rem;
+  color: #F9F9F6;
+  font-weight: 600;
+  margin-bottom: 0.5rem; /* Ger lite utrymme mellan rubrik och text */
+}
 
 .case-small-texts p {
-  font-size: 14px;
-  margin-bottom: 0; /* Ta bort mellanrum under varje text */
+  font-family: "urbane", sans-serif;
+  font-size: 1rem;
+  color: #F9F9F6;
+  font-weight: 200;
+  margin-bottom: 0; /* Tar bort mellanrum under varje p */
+}
+
+.case-small-texts a {
+  color: #F9F9F6;
+  display: inline-block; /* Gör att länkarna beter sig som block så att de kan flyttas */
+  transition: transform 0.3s ease, color 0.3s ease; /* Gör effekten smidig */
+  margin-bottom: 0.3rem;
+}
+
+.case-small-texts a:hover {
+  color: #FF9900;
+  transform: translateX(10px); /* Flytta länken 10px åt höger */
+
+}
+
+/* Image Section */
+.case-image {
+  width: 60%;  /* Gör bilden mindre för att passa bredvid texten */
 }
 
 .case-image img {
-  width: 600px;
+  width: 100%;  /* Gör bilden responsiv genom att sätta bredden till 100% */
   height: auto;
 }
+
+/* Responsivitet */
+@media screen and (max-width: 768px) {
+  .case-container {
+    flex-direction: column;  /* Gör om layouten till en vertikal stapling på små skärmar */
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .case-text {
+    width: 100%;
+  }
+
+  .case-image {
+    width: 100%;  /* Gör bilden mindre på små skärmar */
+  }
+
+  .case-small-texts {
+    flex-direction: column;
+    gap: 2rem;  /* Minska mellanrum på små skärmar */
+  }
+}
+
+
+
+
+
+
+
+
+
 
 /*Section 1*/
 
@@ -1184,12 +1253,13 @@ p.introduction-text {
 /*Section 4*/
 .case-section-4 {
   background-color: #2E2A2A;
+  padding-bottom: 3rem;
 }
 
 .text-image-container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Mellanrum mellan raderna */
+  gap: 3rem; /* Mellanrum mellan raderna */
   padding: 1rem 7rem;
 }
 
@@ -1207,10 +1277,11 @@ p.introduction-text {
 }
 
 .text-image-row p {
-  width: 50%; /* Justera bredd för texten */
-  font-size: 1rem;
+  width: 62%; /* Justera bredd för texten */
+  font-size: 1.1rem;
   margin: 0;
   color: #F9F9F6;
+  line-height: 1.4rem;
 }
 
 .text-image-row img {
@@ -1218,40 +1289,100 @@ p.introduction-text {
   height: auto;
 }
 
+
+/* Medium skärmar (surfplattor, ca 768px) */
+@media (max-width: 1024px) {
+  .text-image-container {
+    padding: 1rem 3rem; /* Minskad padding */
+  }
+
+  .text-image-row {
+    flex-direction: column; /* Placera text och bild i en kolumn */
+    gap: 20px; /* Mellanrum mellan text och bild */
+  }
+
+  .text-image-row p {
+    width: 100%; /* Texten fyller hela bredden */
+    text-align: justify; /* Justera text för bättre läsbarhet */
+  }
+
+  .text-image-row img {
+    width: 100%; /* Gör bilden lika bred som innehållsbehållaren */
+    max-width: 400px; /* Begränsa maximal bredd för bilder */
+    align-self: center; /* Centrera bilden */
+  }
+}
+
+
+
 /*Section 5*/
 
-/*Section 6 - Validation*/
-
-.case-section-6 {
-  background-color: #2E2A2A;
-  padding: 3rem 7rem;
+.case-section-5 {
+  background-color: #F9F9F6;
+  padding-bottom: 3rem;
 }
 
-.case-section-6 h3 {
+.text-image-container-5 {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Mellanrum mellan raderna */
+  padding: 1rem 7rem;
+}
+
+.text-image-container-5 h3 {
   font-family: "urbane", sans-serif;
-  color: #F9F9F6;
+  color: #2E2A2A;
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
-.case-section-6 p {
-  font-family: "basic-sans", sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #F9F9F6;
+.text-image-row-5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/*Section 8*/
-.section-8 {
-  display: flex;  /* Flexbox gör att bilderna ligger på rad */
-  padding: 3rem 7rem;  /* Padding runt hela raden */
+.text-image-row-5 img {
+  width: 30%; /* Justera bredd för bilden */
+  height: auto;
+  margin-right: 20px; /* Mellanrum mellan bild och text */
+}
+
+.text-image-row-5 p {
+  width: 62%; /* Justera bredd för texten */
+  font-size: 1.1rem;
   margin: 0;
+  color: #2E2A2A;
+  line-height: 1.4rem;
 }
 
-.solution {
-  height: auto;  /* Behåller bildens proportioner */
+/* Medium skärmar (surfplattor, ca 768px) */
+@media (max-width: 1024px) {
+  .text-image-container-5 {
+    padding: 1rem 3rem; /* Minskad padding */
+  }
+
+  .text-image-row-5 {
+    flex-direction: column; /* Placera text och bild i en kolumn */
+    gap: 20px; /* Mellanrum mellan text och bild */
+  }
+
+  .text-image-row-5 p {
+    width: 100%; /* Texten fyller hela bredden */
+    text-align: justify; /* Justera text för bättre läsbarhet */
+  }
+
+  .text-image-row-5 img {
+    width: 100%; /* Gör bilden lika bred som innehållsbehållaren */
+    max-width: 400px; /* Begränsa maximal bredd för bilder */
+    align-self: center; /* Centrera bilden */
+  }
 }
+
+
+
+/*Section 6 - Solution*/
+
 
 
 
