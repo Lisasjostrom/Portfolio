@@ -1063,4 +1063,174 @@ footer ul li a:hover {
   line-height: 15px;
 }
 
+/*Case*/
+
+.case-container {
+  display: flex;
+  align-items: center;
+  background-color: #2E2A2A;
+  margin-top: 1px;
+}
+
+.case-text {
+  width: 60%;
+}
+
+.case-heading {
+  font-size: 2rem;
+  margin-bottom: 0.2em;
+  color: #F9F9F6;
+  font-family: "urbane", sans-serif;
+}
+
+.case-text p {
+  font-size: 1rem;
+  color: #F9F9F6;
+  font-family: "urbane", sans-serif;
+  margin-bottom: 2rem;
+}
+
+p.introduction-text {
+  font-family: "lft-etica-mono", sans-serif;
+  font-weight: 200;
+}
+
+.case-small-texts {
+  display: flex;
+  gap: 20px; /* Lägger mellanrum mellan texterna */
+  margin-top: 20px; /* Ger lite utrymme över de små texterna */
+  color: #F9F9F6;
+  gap: 6rem;
+}
+
+.case-small-texts p {
+  font-size: 14px;
+  margin-bottom: 0; /* Ta bort mellanrum under varje text */
+}
+
+.case-image img {
+  width: 600px;
+  height: auto;
+}
+
+/*Section 1*/
+
+.case-section-1{
+  padding: 0 7rem;
+  padding-top: 2rem;
+}
+
+.case-section-1 h3 {
+  font-family: "urbane", sans-serif;
+  color: #2E2A2A;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.case-section-1 p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/*Section 2*/
+
+.case-section-2 img {
+  width: 100%; /* Bilden sträcker sig över hela bredden */
+  height: auto; /* Bevarar proportionerna */
+  display: block; /* Tar bort extra mellanrum som img kan skapa */
+}
+
+/*Section 3*/
+
+.case-section-3 {
+  padding: 2rem 7rem;
+  text-align: left;
+
+}
+
+.case-section-3 h3 {
+  font-family: "urbane", sans-serif;
+  color: #2E2A2A;
+  font-size: 1rem;
+}
+
+.case-section-3 p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.case-section-3-image {
+  width: 70%; /* Bilden sträcker sig över hela bredden */
+  height: auto; /* Behåller bildens proportioner */
+  display: block; /* För att ta bort extra utrymme under bilden */
+  margin: 0 auto; /* Centrerar bilden horisontellt */
+}
+
+
+/*Section 4*/
+.case-section-4 {
+  background-color: #2E2A2A;
+}
+
+.text-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Mellanrum mellan raderna */
+  padding: 1rem 7rem;
+}
+
+.text-image-container h3 {
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.text-image-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-image-row p {
+  width: 50%; /* Justera bredd för texten */
+  font-size: 1rem;
+  margin: 0;
+  color: #F9F9F6;
+}
+
+.text-image-row img {
+  width: 30%; /* Justera bredd för bilden */
+  height: auto;
+}
+
+/*Section 5*/
+
+/*Section 6 - Validation*/
+
+.case-section-6 {
+  background-color: #2E2A2A;
+  padding: 3rem 7rem;
+}
+
+.case-section-6 h3 {
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.case-section-6 p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #F9F9F6;
+}
+
+
 
