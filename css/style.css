@@ -339,7 +339,7 @@ padding: 2rem;
 }
 
 .image-link:hover img {
-  transform: scale(1.03); /* Förstorar bilden vid hover */
+  transform: scale(1.05); /* Förstorar bilden vid hover */
 }
 
 
@@ -1258,8 +1258,7 @@ p.introduction-text {
 
 /* När man hovrar på länken (a), förstora bilden */
 .project-item a:hover img {
-  transform: scale(1.03); /* Förstorar bilden vid hover */
-  opacity: 0.9; /* Gör bilden något genomskinlig vid hover (valfritt) */
+  transform: scale(1.05); /* Förstorar bilden vid hover */
 }
 
 
