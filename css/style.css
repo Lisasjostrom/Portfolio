@@ -1093,7 +1093,6 @@ header a {
 
 .case-heading {
   font-size: 2rem;
-  margin-bottom: 0.1em;
   color: #F9F9F6;
   font-family: "urbane", sans-serif;
 }
@@ -1211,6 +1210,9 @@ p.introduction-text {
   font-weight: 300;
   font-size: 1rem;
   margin-bottom: 2rem;
+  color: #2E2A2A;
+  font-weight: 500;
+
 }
 
 /*Section 2*/
@@ -1237,9 +1239,10 @@ p.introduction-text {
 
 .case-section-3 p {
   font-family: "basic-sans", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1rem;
   margin-bottom: 2rem;
+  color: #2E2A2A;
 }
 
 .case-section-3-image {
@@ -1278,10 +1281,14 @@ p.introduction-text {
 
 .text-image-row p {
   width: 62%; /* Justera bredd för texten */
-  font-size: 1.1rem;
   margin: 0;
   color: #F9F9F6;
   line-height: 1.4rem;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+
+
 }
 
 .text-image-row img {
@@ -1350,10 +1357,12 @@ p.introduction-text {
 
 .text-image-row-5 p {
   width: 62%; /* Justera bredd för texten */
-  font-size: 1.1rem;
   margin: 0;
   color: #2E2A2A;
   line-height: 1.4rem;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 /* Medium skärmar (surfplattor, ca 768px) */
@@ -1381,8 +1390,110 @@ p.introduction-text {
 
 
 
-/*Section 6 - Solution*/
+/*Section 6 */
+
+.case-section-6 {
+  background-color: #2E2A2A;
+  padding:3rem 7rem;
+  box-sizing: border-box;
+}
 
 
 
+.case-section-6 h3 {
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
 
+.case-section-6 p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #F9F9F6;
+  margin-bottom: 1rem;
+}
+
+
+/*Section 7*/
+
+.case-section-7 {
+  background-color: #F9F9F6;
+  padding: 1rem 7rem;
+  box-sizing: border-box;
+}
+
+
+.case-section-7 h3 {
+  font-family: "urbane", sans-serif;
+  color: #2E2A2A;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.case-section-7 p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #2E2A2A;
+  margin-bottom: 1rem;
+}
+
+
+
+/* Image section */
+.case-image-container-7 {
+  width: 35%;
+}
+
+.case-main-image-7 {
+  width: 60%;
+  height: auto;
+}
+
+/* Row of smaller images */
+.case-image-row-7 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.case-image-7 {
+  width: 23%; /* Adjust based on your design preferences */
+  height: auto;
+}
+
+
+/* Medium skärmar (surfplattor, ca 768px) */
+@media (max-width: 1024px) {
+  .case-section-7 {
+    padding: 1rem 3rem; /* Minska padding */
+  }
+
+  .case-section-7-text {
+    padding: 1rem 0; /* Justera textens padding */
+  }
+
+  .case-section-7 h3 {
+    font-size: 1.2rem; /* Justera storleken på rubriken för mindre skärmar */
+  }
+
+  .case-section-7 p {
+    font-size: 0.95rem; /* Justera fontstorlek för bättre läsbarhet */
+  }
+
+  .case-7-image-row {
+    display: flex; /* Gör om till flexbox för att hantera centrering */
+    flex-direction: column; /* Stapla bilderna vertikalt */
+    gap: 1rem; /* Öka avståndet mellan bilder */
+    align-items: center; /* Centrera bilderna horisontellt */
+    justify-content: center; /* Centrera bilderna vertikalt */
+  }
+
+  .case-image-7 {
+    width: 100%; /* Gör bilderna lika breda som föräldraelementet */
+    max-width: 300px; /* Begränsa maxbredden på bilder */
+    height: auto; /* Bevara bildens proportioner */
+  }
+}
