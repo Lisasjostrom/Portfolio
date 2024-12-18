@@ -701,38 +701,32 @@ footer ul li a:hover {
 
 
 
-/*Case*/
-
-/* Case Container */
+/* Case - Kulturkompassen */
 
 header a {
   text-decoration: none;
-  /* Tar bort understrykning från länken */
 }
 
-
-.case-container {
+.intro-container {
   margin-top: 1px;
   display: flex;
   align-items: center;
   background-color: #2E2A2A;
-  padding-left: 7rem;
+  padding-left: 10rem;
   box-sizing: border-box;
-  /* Säkerställer att padding inte påverkar bredden */
 }
 
-/* Text Section */
-.case-text {
+.intro-text {
   width: 60%;
 }
 
-.case-heading {
+.intro-heading {
   font-size: 2rem;
   color: #F9F9F6;
   font-family: "urbane", sans-serif;
 }
 
-.case-text p {
+.intro-text p {
   font-size: 1rem;
   color: #F9F9F6;
   font-family: "urbane", sans-serif;
@@ -745,88 +739,131 @@ p.introduction-text {
   font-weight: 200;
 }
 
-/* Small Texts Section */
-.case-small-texts {
+.intro-details {
   display: flex;
   gap: 7rem;
 }
 
-.case-small-texts div {
-  display: flex;
-  flex-direction: column;
-}
-
-.case-small-texts h5 {
+.intro-details h5 {
   font-family: "urbane", sans-serif;
   font-size: 1rem;
   color: #F9F9F6;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  /* Ger lite utrymme mellan rubrik och text */
 }
 
-.case-small-texts p {
+.intro-details p {
   font-family: "urbane", sans-serif;
   font-size: 1rem;
   color: #F9F9F6;
   font-weight: 200;
   margin-bottom: 0;
-  /* Tar bort mellanrum under varje p */
 }
 
-.case-small-texts a {
+.intro-details a {
   color: #F9F9F6;
   display: inline-block;
-  /* Gör att länkarna beter sig som block så att de kan flyttas */
   transition: transform 0.3s ease, color 0.3s ease;
-  /* Gör effekten smidig */
   margin-bottom: 0.3rem;
 }
 
-.case-small-texts a:hover {
+.intro-details a:hover {
   color: #FF9900;
   transform: translateX(10px);
-  /* Flytta länken 10px åt höger */
-
 }
 
-/* Image Section */
-.case-image {
+.intro-image {
   width: 60%;
-  /* Gör bilden mindre för att passa bredvid texten */
 }
 
-.case-image img {
+.intro-image img {
   width: 100%;
-  /* Gör bilden responsiv genom att sätta bredden till 100% */
   height: auto;
 }
 
-/* Responsivitet */
-@media screen and (max-width: 768px) {
-  .case-container {
-    flex-direction: column;
-    /* Gör om layouten till en vertikal stapling på små skärmar */
-    align-items: center;
-    padding: 2rem;
+/* Responsivitet för intro */
+
+/* 1024px */
+@media (max-width: 1024px) {
+  .intro-container {
+      flex-direction: column;
+      padding: 2rem 5rem;
+      text-align: center;
   }
 
-  .case-text {
+  .intro-text {
+      width: 100%;
+      margin-bottom: 2rem;
+  }
+
+  .introduction-text {
+    text-align: justify;
+  }
+
+  .intro-heading {
+      font-size: 1.8rem;
+  }
+
+  .intro-details {
+      flex-direction: column;
+      gap: 2rem; 
+  }
+
+  .intro-image {
     width: 100%;
+}
+
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .intro-container {
+      padding: 2rem; 
   }
 
-  .case-image {
-    width: 100%;
-    /* Gör bilden mindre på små skärmar */
+  .intro-text p {
+      font-size: 0.9rem;
+      line-height: 1.4rem;
   }
 
-  .case-small-texts {
-    flex-direction: column;
-    gap: 2rem;
-    /* Minska mellanrum på små skärmar */
+  .intro-heading {
+      font-size: 1.5rem;
+  }
+
+  .intro-details {
+      gap: 1.5rem;
+  }
+
+  .intro-details h5,
+  .intro-details p {
+      font-size: 0.9rem;
   }
 }
 
+/* 480 px */
+@media (max-width: 480px) {
+  .intro-container {
+      padding: 1rem;
+  }
+
+  .intro-heading {
+      font-size: 1.2rem;
+  }
+
+  .intro-text p {
+      font-size: 0.8rem;
+      line-height: 1.3rem;
+  }
+
+  .intro-details {
+      gap: 1rem;
+  }
+
+  .intro-details h5,
+  .intro-details p {
+      font-size: 0.8rem;
+  }
+}
 
 
 
@@ -839,7 +876,9 @@ p.introduction-text {
 /*Section 1*/
 
 .case-section-1 {
-  padding: 0 7rem;
+  max-width: 90ch;
+  margin: 0 auto;
+  text-align: left;
   padding-top: 2rem;
 }
 
@@ -860,23 +899,40 @@ p.introduction-text {
 
 }
 
+/* Responsivitet case-section-1*/
+@media (max-width: 1024) {
+  .case-section-1 {
+      padding: 2rem 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-section-1 {
+      padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-section-1 {
+      padding: 1rem; 
+  }
+}
+
 /*Section 2*/
 
 .case-section-2 img {
   width: 100%;
-  /* Bilden sträcker sig över hela bredden */
   height: auto;
-  /* Bevarar proportionerna */
   display: block;
-  /* Tar bort extra mellanrum som img kan skapa */
 }
 
 /*Section 3*/
 
 .case-section-3 {
-  padding: 2rem 7rem;
+  max-width: 90ch;
+  margin: 0 auto;
   text-align: left;
-
+  padding-top: 2rem;
 }
 
 .case-section-3 h3 {
@@ -889,19 +945,49 @@ p.introduction-text {
   font-family: "basic-sans", sans-serif;
   font-weight: 500;
   font-size: 1rem;
-  margin-bottom: 2rem;
   color: #2E2A2A;
 }
 
 .case-section-3-image {
-  width: 70%;
-  /* Bilden sträcker sig över hela bredden */
+  width: 60%;
   height: auto;
-  /* Behåller bildens proportioner */
   display: block;
-  /* För att ta bort extra utrymme under bilden */
   margin: 0 auto;
-  /* Centrerar bilden horisontellt */
+}
+
+/* Responsivitet case-section-3 */
+
+/* 1024px */
+@media (max-width: 1024px) {
+  .case-section-3 {
+    padding: 2rem 5rem;
+  }
+
+  .case-section-3-image {
+    width: 80%; 
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .case-section-3 {
+    padding: 2rem;
+  }
+
+  .case-section-3-image {
+    width: 90%;
+  }
+}
+
+/* 480px */
+@media (max-width: 480px) {
+  .case-section-3 {
+    padding: 1rem; /* Padding på 1rem på alla sidor */
+  }
+
+  .case-section-3-image {
+    width: 90%; /* Gör bilden fullbredd på de minsta enheterna */
+  }
 }
 
 
@@ -911,30 +997,29 @@ p.introduction-text {
   padding-bottom: 3rem;
 }
 
-.text-image-container {
+.text-image-container-4 {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  /* Mellanrum mellan raderna */
-  padding: 1rem 7rem;
+  gap: 5rem;
+  padding: 1rem 15rem;
 }
 
-.text-image-container h3 {
+.text-image-container-4 h3 {
   font-family: "urbane", sans-serif;
   color: #F9F9F6;
   font-size: 1rem;
   margin-top: 2rem;
 }
 
-.text-image-row {
+.text-image-row-4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 3rem;
 }
 
-.text-image-row p {
-  width: 62%;
-  /* Justera bredd för texten */
+.text-image-row-4 p {
+  width: 90ch;
   margin: 0;
   color: #F9F9F6;
   line-height: 1.4rem;
@@ -945,44 +1030,81 @@ p.introduction-text {
 
 }
 
-.text-image-row img {
+.text-image-row-4 img {
   width: 30%;
-  /* Justera bredd för bilden */
   height: auto;
 }
 
+/* Responsivitet case-section-4 */
 
-/* Medium skärmar (surfplattor, ca 768px) */
 @media (max-width: 1024px) {
-  .text-image-container {
-    padding: 1rem 3rem;
-    /* Minskad padding */
+  .text-image-container-4 {
+    padding: 2rem 5rem;
   }
 
-  .text-image-row {
-    flex-direction: column;
-    /* Placera text och bild i en kolumn */
-    gap: 20px;
-    /* Mellanrum mellan text och bild */
+  .text-image-container-4 h3 {
+    margin-top: 0;
   }
 
-  .text-image-row p {
-    width: 100%;
-    /* Texten fyller hela bredden */
-    text-align: justify;
-    /* Justera text för bättre läsbarhet */
+  .text-image-row-4 {
+    flex-direction: column;  /* Bild och text staplas vertikalt */
+    gap: 2rem;
+    align-items: center;
   }
 
-  .text-image-row img {
-    width: 100%;
-    /* Gör bilden lika bred som innehållsbehållaren */
-    max-width: 400px;
-    /* Begränsa maximal bredd för bilder */
-    align-self: center;
-    /* Centrera bilden */
+  .text-image-row-4 p {
+    width: 100%; /* Texten fyller hela bredden */
+    margin-bottom: 1rem; /* Lägger till ett mellanrum efter texten */
+  }
+
+  .text-image-row-4 img {
+    width: 80%; /* Gör bilden mindre */
+    margin-top: 1rem;  /* Lite avstånd innan bilden */
   }
 }
 
+/* För skärmar 768px och mindre */
+@media (max-width: 768px) {
+  .text-image-container-4 {
+    padding: 2rem;
+  }
+
+  .text-image-row-4 {
+    flex-direction: column;  /* Bild och text staplas vertikalt */
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .text-image-row-4 p {
+    width: 100%; /* Texten fyller hela bredden */
+  }
+
+  .text-image-row-4 img {
+    width: 90%; /* Gör bilden större för små enheter */
+  }
+}
+
+/* För skärmar 480px och mindre */
+@media (max-width: 480px) {
+  .text-image-container-4 {
+    padding: 1rem;
+  }
+
+  .text-image-row-4 {
+    flex-direction: column;  /* Bild och text staplas vertikalt */
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .text-image-row-4 p {
+    width: 100%; /* Texten fyller hela bredden */
+  }
+
+  .text-image-row-4 img {
+    width: 100%; /* Gör bilden fullbredd */
+    margin-top: 1rem;
+  }
+}
 
 
 /*Section 5*/
@@ -995,9 +1117,8 @@ p.introduction-text {
 .text-image-container-5 {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  /* Mellanrum mellan raderna */
-  padding: 1rem 7rem;
+  gap: 5rem;
+  padding: 1rem 15rem;
 }
 
 .text-image-container-5 h3 {
@@ -1011,19 +1132,11 @@ p.introduction-text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.text-image-row-5 img {
-  width: 30%;
-  /* Justera bredd för bilden */
-  height: auto;
-  margin-right: 20px;
-  /* Mellanrum mellan bild och text */
+  gap: 3rem;
 }
 
 .text-image-row-5 p {
-  width: 62%;
-  /* Justera bredd för texten */
+  width: 90ch;
   margin: 0;
   color: #2E2A2A;
   line-height: 1.4rem;
@@ -1032,34 +1145,85 @@ p.introduction-text {
   font-size: 1rem;
 }
 
-/* Medium skärmar (surfplattor, ca 768px) */
+.text-image-row-5 img {
+  width: 30%;
+  height: auto;
+}
+
+
+
+/* Responsivitet case-section-5 */
+
 @media (max-width: 1024px) {
   .text-image-container-5 {
-    padding: 1rem 3rem;
-    /* Minskad padding */
+    padding: 2rem 5rem;
+  }
+
+  .text-image-container-5 h3 {
+    margin-top: 0;
   }
 
   .text-image-row-5 {
-    flex-direction: column;
-    /* Placera text och bild i en kolumn */
-    gap: 20px;
-    /* Mellanrum mellan text och bild */
+    flex-direction: column;  /* Bild och text staplas vertikalt */
+    gap: 2rem;
+    align-items: center;
   }
 
   .text-image-row-5 p {
-    width: 100%;
-    /* Texten fyller hela bredden */
-    text-align: justify;
-    /* Justera text för bättre läsbarhet */
+    width: 100%; /* Texten fyller hela bredden */
+    margin-bottom: 1rem; /* Lägger till ett mellanrum efter texten */
   }
 
   .text-image-row-5 img {
-    width: 100%;
-    /* Gör bilden lika bred som innehållsbehållaren */
-    max-width: 400px;
-    /* Begränsa maximal bredd för bilder */
-    align-self: center;
-    /* Centrera bilden */
+    width: 80%; /* Gör bilden mindre */
+    margin-top: 1rem;  /* Lite avstånd innan bilden */
+  }
+}
+
+/* För skärmar 768px och mindre */
+@media (max-width: 768px) {
+  .text-image-container-5 {
+    padding: 2rem;
+  }
+
+  .text-image-row-5 {
+    flex-direction: column;  /* Bild och text staplas vertikalt */
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .text-image-row-5 p {
+    width: 100%; /* Texten fyller hela bredden */
+    order: -1; /* Gör att texten kommer först */
+
+  }
+
+  .text-image-row-5 img {
+    width: 90%; /* Gör bilden större för små enheter */
+  }
+}
+
+/* För skärmar 480px och mindre */
+@media (max-width: 480px) {
+  .text-image-container-5 {
+    padding: 1rem;
+  }
+
+  .text-image-row-5 {
+    flex-direction: column;  /* Bild och text staplas vertikalt */
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .text-image-row-5 p {
+    width: 100%; /* Texten fyller hela bredden */
+    order: -1; /* Gör att texten kommer först */
+
+  }
+
+  .text-image-row-5 img {
+    width: 100%; /* Gör bilden fullbredd */
+    margin-top: 1rem;
   }
 }
 
@@ -1374,3 +1538,217 @@ p.introduction-text {
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TEST */
+
+
+/* Sektion 1: Vänsterställda rubriker och texter */
+
+.case-texts-stack{
+  padding: 2rem 9rem;
+}
+
+.case-texts-stack h3 {
+  font-family: "urbane", sans-serif;
+  color: #2E2A2A;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.case-texts-stack p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #2E2A2A;
+  font-weight: 500;
+}
+
+
+
+/* Sektion 2: Bild som tar hela utrymmet */
+.case-full-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Sektion 3: Text och bild i mitten */
+
+.case-center-image {
+  padding: 2rem 9rem;
+}
+
+.case-center-image h3 {
+  font-family: "urbane", sans-serif;
+  color: #2E2A2A;
+  font-size: 1rem;
+  text-align: start;
+}
+
+.case-center-image p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #2E2A2A;
+  font-weight: 500;
+  text-align: start;
+}
+
+.case-center-image {
+  text-align: center;
+}
+
+.case-center-image img {
+  display: block;
+  margin: 20px auto;
+  width: 70%;
+  height: auto;
+}
+
+/* Sektion 4: Text med bilder till höger */
+
+.case-right-images {
+  background-color: #2E2A2A;
+  padding: 2rem 9rem;
+}
+
+.case-right-images h3 {
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: start;
+}
+
+.case-right-images p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #F9F9F6;
+  font-weight: 500;
+  padding-right: 2rem;
+}
+
+
+.case-right-images div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.case-right-images img {
+  margin-left: 20px;
+  width: 30%;
+  height: auto;
+}
+
+/* Sektion 5: Bilder till vänster och text till höger */
+
+.case-left-images {
+  padding: 2rem 9rem;
+}
+.case-left-images div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.case-left-images h3 {
+  font-family: "urbane", sans-serif;
+  color: #2E2A2A;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: start;
+}
+
+.case-left-images p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #2E2A2A;
+  font-weight: 500;
+  padding-left: 2rem;
+}
+
+.case-left-images img {
+  margin-right: 20px;
+  width: 30%;
+  height: auto;
+}
+
+/* Sektion 6: Enkel rubrik och text */
+
+.case-single-text {
+  background-color: #2E2A2A;
+  padding: 2rem 9rem;
+  padding-bottom: 3rem;
+}
+.case-single-text h3 {
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.case-single-text p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #F9F9F6;
+  font-weight: 500;
+  padding-right: 2rem;
+}
+
+/* Sektion 7: Bilder på rad */
+
+.case-images-row {
+  padding: 2rem 9rem;
+}
+
+.case-images-row h3 {
+  font-family: "urbane", sans-serif;
+  color: #2E2A2A;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: start;
+}
+
+.case-images-row p {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #2E2A2A;
+  font-weight: 500;
+}
+
+.case-images-row .images-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.case-images-row .images-row img {
+  width: 20%;
+  height: auto;
+  margin-top: 2rem;
+}
+
+
