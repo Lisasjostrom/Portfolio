@@ -863,6 +863,7 @@ p.introduction-text {
   height: auto;
   display: block;
   margin: 0 auto;
+  padding: 3rem 0;
 }
 
 /* Responsivitet case-section-3 */
@@ -1153,7 +1154,7 @@ p.introduction-text {
 }
 
 /* Responsivitet case-section-6 */
-@media (max-width: 1024) {
+@media (max-width: 1024px) {
   .case-section-6 {
     padding: 2rem 5rem;
   }
