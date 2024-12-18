@@ -103,6 +103,27 @@ html {
   background-color: #AF9D8F;
 }
 
+/* Responsivitet Navbar-animate */
+@media (max-width: 768px) {
+  .navbar-animate ul {
+    gap: 3rem; /* Minskar avståndet mellan länkar */
+  }
+
+  .nav-link-animate {
+    font-size: 1rem; /* Minskar textstorleken för små skärmar */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-animate ul {
+    gap: 5rem; /* Ytterligare minskning av avståndet för små skärmar */
+  }
+
+  .nav-link-animate {
+    font-size: 0.9rem; /* Mindre textstorlek */
+  }
+}
+
 /* Statisk Navbar för Projects och About */
 .navbar {
   font-family: "lft-etica-mono", sans-serif;
@@ -152,6 +173,27 @@ html {
   width: 100%;
   height: 2px;
   background-color: #AF9D8F;
+}
+
+/* Responsivitet Navbar-animate */
+@media (max-width: 768px) {
+  .navbar ul {
+    gap: 3rem; /* Minskar avståndet mellan länkar */
+  }
+
+  .nav-link{
+    font-size: 1rem; /* Minskar textstorleken för små skärmar */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul {
+    gap: 5rem; /* Ytterligare minskning av avståndet för små skärmar */
+  }
+
+  .nav-link {
+    font-size: 0.9rem; /* Mindre textstorlek */
+  }
 }
 
 /* Startsida */
