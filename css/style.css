@@ -1350,10 +1350,13 @@ p.introduction-text {
   padding: 2rem 3rem;
 }
 
+/* About section */
 .about {
-  padding: 1rem;
   background-color: #F9F9F6;
-  text-align: center;
+  padding: 2rem 10rem;
+  display: flex;
+  align-items: center;  /* Centrerar bilden med textens mitt */
+  gap: 6rem;
 }
 
 .about h2 {
@@ -1364,26 +1367,6 @@ p.introduction-text {
   margin-bottom: 2rem;
 }
 
-.about .container {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 3rem;
-  width: 80%;
-  gap: 0 100px;
-}
-
-.about .text {
-  flex: 1;
-  flex-wrap: wrap;
-}
-
-.text .hello {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.8rem;
-}
-
 .about .text p {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1391,22 +1374,65 @@ p.introduction-text {
   font-family: "lft-etica-mono", sans-serif;
 }
 
-
+.hello {
+  font-weight: 500;
+}
 .about-image img {
-  width: 300px;
+  width: 350px;
   height: auto;
 }
 
-/*Contact section */
-
-.contact .container {
-  flex-direction: column;
-  text-align: left;
+/* Medieregler för mindre skärmar */
+@media (max-width: 1024px) {
+  .about {
+    padding: 2rem 5rem;
+    gap: 4rem;
+    align-items: center;
+  }
 }
 
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+  }
+
+  .about-image {
+  order: -1;
+  }
+
+  .about-image img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .about-image {
+    order: -1;
+    }
+  
+    .about-image img {
+      width: 100%;
+    }
+}
+
+
+/*Contact section */
+
+/* Contact section */
 .contact {
   background-color: #F9F9F6;
-  text-align: left;
+  padding: 2rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Här ändrar vi till vänsterjustering */
 }
 
 .contact h2 {
@@ -1421,12 +1447,12 @@ p.introduction-text {
   font-family: "basic-sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .contact li {
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem;
 }
 
 .contact ul li a {
@@ -1440,29 +1466,37 @@ p.introduction-text {
   margin-right: 10px;
 }
 
-.connect li :hover {
+.connect li a:hover {
   color: #FF9900;
   transform: translateX(10px);
 }
 
+/* Medieregler */
+@media (max-width: 1024px) {
+  .contact {
+    padding: 2rem 5rem;
+  }
+
+}
+
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
+  .contact {
+    padding: 2rem;
   }
 
-  .about h2 {
-    font-size: 1.8rem;
-  }
+}
 
-  .about-image {
-    margin-bottom: 2rem;
-    order: -1;
-  }
-
-  .about-image img {
-    width: 100%;
+@media (max-width: 480px) {
+  .contact {
+    padding: 1rem;
   }
 }
+
+
+
+
+
+
 
 /* Footer */
 
