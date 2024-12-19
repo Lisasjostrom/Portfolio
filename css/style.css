@@ -106,21 +106,25 @@ html {
 /* Responsivitet Navbar-animate */
 @media (max-width: 768px) {
   .navbar-animate ul {
-    gap: 3rem; /* Minskar avståndet mellan länkar */
+    gap: 3rem;
+    /* Minskar avståndet mellan länkar */
   }
 
   .nav-link-animate {
-    font-size: 1rem; /* Minskar textstorleken för små skärmar */
+    font-size: 1rem;
+    /* Minskar textstorleken för små skärmar */
   }
 }
 
 @media (max-width: 480px) {
   .navbar-animate ul {
-    gap: 5rem; /* Ytterligare minskning av avståndet för små skärmar */
+    gap: 5rem;
+    /* Ytterligare minskning av avståndet för små skärmar */
   }
 
   .nav-link-animate {
-    font-size: 0.9rem; /* Mindre textstorlek */
+    font-size: 0.9rem;
+    /* Mindre textstorlek */
   }
 }
 
@@ -178,21 +182,25 @@ html {
 /* Responsivitet Navbar-animate */
 @media (max-width: 768px) {
   .navbar ul {
-    gap: 3rem; /* Minskar avståndet mellan länkar */
+    gap: 3rem;
+    /* Minskar avståndet mellan länkar */
   }
 
-  .nav-link{
-    font-size: 1rem; /* Minskar textstorleken för små skärmar */
+  .nav-link {
+    font-size: 1rem;
+    /* Minskar textstorleken för små skärmar */
   }
 }
 
 @media (max-width: 480px) {
   .navbar ul {
-    gap: 5rem; /* Ytterligare minskning av avståndet för små skärmar */
+    gap: 5rem;
+    /* Ytterligare minskning av avståndet för små skärmar */
   }
 
   .nav-link {
-    font-size: 0.9rem; /* Mindre textstorlek */
+    font-size: 0.9rem;
+    /* Mindre textstorlek */
   }
 }
 
@@ -1355,7 +1363,8 @@ p.introduction-text {
   background-color: #F9F9F6;
   padding: 2rem 10rem;
   display: flex;
-  align-items: center;  /* Centrerar bilden med textens mitt */
+  align-items: center;
+  /* Centrerar bilden med textens mitt */
   gap: 6rem;
 }
 
@@ -1377,6 +1386,7 @@ p.introduction-text {
 .hello {
   font-weight: 500;
 }
+
 .about-image img {
   width: 350px;
   height: auto;
@@ -1400,7 +1410,7 @@ p.introduction-text {
   }
 
   .about-image {
-  order: -1;
+    order: -1;
   }
 
   .about-image img {
@@ -1416,11 +1426,11 @@ p.introduction-text {
 
   .about-image {
     order: -1;
-    }
-  
-    .about-image img {
-      width: 100%;
-    }
+  }
+
+  .about-image img {
+    width: 100%;
+  }
 }
 
 
@@ -1432,7 +1442,8 @@ p.introduction-text {
   padding: 2rem 10rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Här ändrar vi till vänsterjustering */
+  align-items: flex-start;
+  /* Här ändrar vi till vänsterjustering */
 }
 
 .contact h2 {
@@ -1584,7 +1595,8 @@ footer ul li a:hover {
   }
 
   .social-links {
-    grid-template-columns: repeat(2, 1fr); /* 2 kolumner för sociala länkar */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 kolumner för sociala länkar */
   }
 }
 
@@ -1600,8 +1612,10 @@ footer ul li a:hover {
   }
 
   .footer-row {
-    flex-direction: column; /* Gör allt vertikalt */
-    align-items: center; /* Centrerar innehållet */
+    flex-direction: column;
+    /* Gör allt vertikalt */
+    align-items: center;
+    /* Centrerar innehållet */
   }
 
   .footer-links {
@@ -1610,8 +1624,13 @@ footer ul li a:hover {
     margin-bottom: 1rem;
   }
 
+  .site-links {
+    margin-bottom: 2rem;
+  }
+
   .social-links {
-    grid-template-columns: 1fr 1fr; /* 2 kolumner för sociala länkar */
+    grid-template-columns: repeat(3, 1fr);
+    /* Behåller tre kolumner */
     gap: 8px;
   }
 }
@@ -1637,8 +1656,13 @@ footer ul li a:hover {
     margin-bottom: 1rem;
   }
 
+  .site-links {
+    margin-bottom: 2rem;
+  }
+
   .social-links {
-    grid-template-columns: 1fr; /* 1 kolumn för sociala länkar på små skärmar */
+    grid-template-columns: repeat(3, 1fr);
+    /* Behåller tre kolumner */
     gap: 5px;
   }
 
