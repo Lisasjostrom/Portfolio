@@ -455,6 +455,24 @@ p.additional-text {
   /* Länken hoppar ner 5px när man hovrar */
 }
 
+/* Navbar-projects */
+@media screen and (max-width: 768px) {
+
+  .navbar-projects {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-projects {
+    padding: 1rem 3rem;
+  }
+
+  .navbar-projects-link {
+    font-size: 0.7rem;
+  }
+}
+
 
 /* Projects */
 
@@ -532,29 +550,6 @@ p.additional-text {
 
 /* Responsiv design för mindre skärmar (t.ex. mobiler och tablets) */
 
-/* Navbar-projects */
-@media screen and (max-width: 768px) {
-
-  .navbar-projects-list {
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
-
-  .navbar-projects-link {
-    padding: 0.8rem;
-    font-size: 1.1rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .navbar-projects {
-    padding: 0.8rem;
-  }
-
-  .navbar-projects-link {
-    font-size: 1rem;
-  }
-}
 
 @media (max-width: 768px) {
 
