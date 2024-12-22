@@ -170,6 +170,18 @@ html {
   }
 }
 
+/* Headings för Projects och About */
+
+.about-heading,
+.projects-heading {
+  font-size: 3rem;
+  font-family: "urbane", sans-serif;
+  color: #F9F9F6;
+  background-color: #2E2A2A;
+  padding: 2rem 3rem;
+}
+
+
 /* Startsida */
 
 .overflow {
@@ -1271,14 +1283,6 @@ p.introduction-text {
 
 /*About page */
 
-.about-heading,
-.projects-heading {
-  font-size: 3rem;
-  font-family: "urbane", sans-serif;
-  color: #F9F9F6;
-  background-color: #2E2A2A;
-  padding: 2rem 3rem;
-}
 
 /* About section */
 .about {
