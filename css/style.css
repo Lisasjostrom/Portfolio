@@ -209,6 +209,31 @@ html {
   }
 }
 
+.chevron-down {
+  width: 15px; /* Bredden på pilen */
+  height: 15px; /* Höjden på pilen */
+  border-left: 3px solid #F9F9F6; /* Vänster diagonal linje */
+  border-bottom: 3px solid #F9F9F6; /* Höger diagonal linje */
+  transform: rotate(-45deg); /* Rotera för att skapa "V"-formen */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  bottom: 2%;
+  animation: smooth-bounce 1.5s infinite;
+}
+
+/* Nyckelramsanimation för mjuk studs */
+@keyframes smooth-bounce {
+  0%, 100% {
+    transform: translate(-50%, 0) rotate(-45deg); /* Start- och slutposition */
+  }
+  50% {
+    transform: translate(-50%, -5px) rotate(-45deg); /* Flytta upp */
+  }
+}
+
+
+
 /* Sektion 2 */
 
 .section-2 {
@@ -596,6 +621,7 @@ header a {
   font-size: 2rem;
   color: #F9F9F6;
   font-family: "urbane", sans-serif;
+  padding-top: 1rem;
 }
 
 .intro-text p {
@@ -669,6 +695,7 @@ p.introduction-text {
 
   .intro-heading {
     font-size: 1.8rem;
+    padding-top: 0;
   }
 
   .intro-details {
@@ -679,12 +706,11 @@ p.introduction-text {
   .intro-image {
     width: 100%;
   }
-
 }
 
 @media (max-width: 768px) {
   .intro-container {
-    padding: 2rem;
+    padding: 2rem 3rem;
   }
 
   .intro-text p {
@@ -901,7 +927,6 @@ p.introduction-text {
 
   .text-image-row-4 {
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
   }
 
@@ -1013,13 +1038,13 @@ p.introduction-text {
 
   .text-image-row-5 {
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
   }
 
   .text-image-row-5 p {
     width: 100%;
     margin-bottom: 1rem;
+    order: -1;
   }
 
   .text-image-row-5 img {
@@ -1510,3 +1535,5 @@ footer ul li a:hover {
     gap: 8px;
   }
 }
+
+
