@@ -456,14 +456,13 @@ p.additional-text {
 }
 
 /* Navbar-projects */
-@media screen and (max-width: 768px) {
-
+@media (max-width: 768px) {
   .navbar-projects {
     padding: 1rem 2rem;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .navbar-projects {
     padding: 1rem 3rem;
   }
@@ -473,13 +472,10 @@ p.additional-text {
   }
 }
 
-
 /* Projects */
 
 .projects {
-  width: 85%;
-  margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 6rem;
   background-color: #F9F9F6;
 }
 
@@ -550,33 +546,20 @@ p.additional-text {
 
 /* Responsiv design för mindre skärmar (t.ex. mobiler och tablets) */
 
-
-@media (max-width: 768px) {
-
-  body {
-    background-color: #F9F9F6;
+@media (max-width: 1024px) {
+  .projects {
+    padding: 0 3rem;
   }
-
+}
+@media (max-width: 768px) {
   .projects {
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
-
 
   .project-grid {
     grid-template-columns: 1fr;
     /* En kolumn per rad för alla projekt */
-  }
-
-  .project-item {
-    display: flex;
-    flex-direction: column;
-    background-color: #F9F9F6;
-    padding: 1rem;
-  }
-
-  .project-category h2 {
-    font-size: 1.2rem;
   }
 
   .project-item img {
@@ -584,36 +567,10 @@ p.additional-text {
     height: auto;
   }
 
-  .project-text h3 {
-    font-size: 1rem;
-  }
-
-  .project-text .year {
-    font-size: 0.9rem;
-  }
-
-  .project-text p {
-    font-size: 0.9rem;
-  }
-
-  /* Anpassa Branding-sektionen */
-  #branding .project-grid {
-    grid-template-columns: 1fr;
-    /* Gör om till en kolumn för branding */
-  }
-
-  /* Dölj tomma kolumner i Branding-sektionen */
   #branding .project-item:nth-child(2),
   #branding .project-item:nth-child(3) {
     display: none;
   }
-
-  /* För UI Design-sektionen */
-  .project-item a:hover img {
-    transform: scale(1.05);
-    opacity: 1;
-  }
-
 }
 
 /* Case-sida*/
@@ -1553,4 +1510,3 @@ footer ul li a:hover {
     gap: 8px;
   }
 }
-
