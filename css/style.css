@@ -244,6 +244,18 @@ html {
   }
 }
 
+/* Responsivitet för heading och pilen nedåt */
+@media (max-width: 768px) {
+
+  .heading {
+    margin-bottom: 1rem;
+  }
+  .chevron-down {
+    bottom: 1%;
+
+  }
+}
+
 
 
 /* Sektion 2 */
