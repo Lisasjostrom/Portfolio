@@ -685,6 +685,16 @@ p.introduction-text {
 
 .intro-image {
   width: 60%;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .intro-image img {
