@@ -285,12 +285,13 @@ html {
 }
 
 p.additional-text {
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   font-family: "lft-etica-mono", sans-serif;
   font-weight: 200;
   font-style: normal;
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 /* Button */
