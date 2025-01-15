@@ -560,7 +560,6 @@ p.additional-text {
   height: auto;
   margin-bottom: 1rem;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  /* Smidig övergång */
 }
 
 /* När man hovrar på länken (a), förstora bilden */
