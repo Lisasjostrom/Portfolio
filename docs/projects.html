@@ -7,35 +7,29 @@
     <title>Lisa Sjöström</title>
     <!-- Länk till extern stilmall -->
     <link rel="stylesheet" href="../css/style.css">
-    <!-- Länk till Adobe Fonts -->
+    <!-- Adobe Fonts för typografi -->
     <link rel="stylesheet" href="https://use.typekit.net/msw3hrg.css">
-    <link rel="stylesheet" href="https://use.typekit.net/msw3hrg.css">
-    <link rel="stylesheet" href="https://use.typekit.net/msw3hrg.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQ6iQ2hK0RlTbMmS6SW+3Vmx1vZfsbNgEuu/sIhAHVEryT8UHVH9L8z6A" crossorigin="anonymous">
-    <!-- Bootstrap JavaScript (inkluderar Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-AE+afZF7QnnU6gbmQftG4wqWbhMkmj+Xdktlu2l3kxwBRFzJj9EhjEmhs4AiP6WI"
-        crossorigin="anonymous"></script>
-    <!-- Light mode favicon -->
-    <link rel="icon" href="../Images/favicon_black.svg" type="image/x-icon" media="(prefers-color-scheme: light)">
-    <!-- Dark mode favicon -->
-    <link rel="icon" href="../Images/favicon_white.svg" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <!-- Light and dark mode favicon -->
+    <link rel="icon" href="../images/favicon_black.svg" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../images/favicon_white.svg" type="image/x-icon" media="(prefers-color-scheme: dark)">
 </head>
 
 <body>
+    <!-- Navigationsmeny -->
     <nav class="navbar">
         <ul>
+            <!--Navigeringslänkar-->
             <li><a href="../index.html" class="nav-link ">Start</a></li>
             <li><a href="projects.html" class="nav-link active">Projects</a></li>
             <li><a href="about.html" class="nav-link">About</a></li>
         </ul>
     </nav>
+    <!-- Header med huvudrubrik -->
     <header>
         <h1 class="projects-heading">Projects.</h1>
     </header>
     <main>
+        <!-- Projektnavigation -->
         <nav class="navbar-projects">
             <ul class="navbar-projects-list">
                 <li><a href="#ui-design" class="navbar-projects-link">UI Design [3]</a></li>
@@ -44,14 +38,15 @@
                 <li><a href="#web-design" class="navbar-projects-link">Web Design [3]</a></li>
             </ul>
         </nav>
-
+        <!-- Sektioner för projektkategorier -->
         <section class="projects">
-            <!-- UI Design -->
+            <!-- UI Design-sektion -->
             <div id="ui-design" class="project-category">
                 <h2>UI Design [3]</h2>
                 <div class="project-grid">
+                    <!--Projekt 1: Kulturkompassen-->
                     <div class="project-item">
-                        <a href="../docs/case.html"><img src="../Images/kulturkompassen2.jpg" alt="UI Project 1"></a>
+                        <a href="../docs/case.html"><img src="../images/kulturkompassen2.jpg" alt="UI Project 1"></a>
                         <div class="project-text">
                             <h3>Kulturkompassen</h3>
                             <p class="year">2024</p>
@@ -59,8 +54,9 @@
                                 engage in interactive experiences.</p>
                         </div>
                     </div>
+                    <!--Projekt 2: Wine Time-->
                     <div class="project-item">
-                        <img src="../Images/winetime.jpg" alt="UI Project 2">
+                        <img src="../images/winetime.jpg" alt="UI Project 2">
                         <div class="project-text">
                             <h3>WineTime</h3>
                             <p class="year">2024</p>
@@ -69,8 +65,9 @@
                             </p>
                         </div>
                     </div>
+                    <!--Projekt 3: ZARA-->
                     <div class="project-item">
-                        <img src="../Images/zara.jpg" alt="UI Project 3">
+                        <img src="../images/zara.jpg" alt="UI Project 3">
                         <div class="project-text">
                             <h3>ZARA</h3>
                             <p class="year">2024</p>
@@ -80,13 +77,13 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Branding -->
+            <!-- Branding-sektion -->
             <div id="branding" class="project-category">
                 <h2>Branding [1]</h2>
                 <div class="project-grid">
+                    <!--Projekt 1: Señor Savant-->
                     <div class="project-item">
-                        <img src="../Images/savant-kopp.jpg" alt="Branding Project">
+                        <img src="../images/savant-kopp.jpg" alt="Branding Project">
                         <div class="project-text">
                             <h3>Señor Savant</h3>
                             <p class="year">2024</p>
@@ -94,26 +91,28 @@
                                 logo, typography, packaging, and business cards to boost brand recognition.</p>
                         </div>
                     </div>
-                    <!-- Tomma platser för layoutens skull -->
+                    <!-- Tomma platser för enhetlig layou -->
                     <div class="project-item"></div>
                     <div class="project-item"></div>
                 </div>
             </div>
-            <!-- Grafisk Design -->
+            <!-- Grafisk Design-sektion -->
             <div id="graphic-design" class="project-category">
                 <h2>Graphic Design</h2>
                 <div class="project-grid">
+                    <!--Projekt 1: Señor Savant -->
                     <div class="project-item">
-                        <img src="../Images/savant-visitkort.jpg" alt="Grafisk Design 1">
+                        <img src="../images/savant-visitkort.jpg" alt="Grafisk Design 1">
                         <div class="project-text">
                             <h3>Señor Savant</h3>
                             <p class="year">2024</p>
-                            <p>An elegant business card design for Senor Savant, reflecting the company’s professional
+                            <p>An elegant business card design for Senor Savant, reflecting the company's professional
                                 style and leaving a lasting impression.</p>
                         </div>
                     </div>
+                    <!--Projekt 2: Baskerville Poster-->
                     <div class="project-item">
-                        <img src="../Images/baskerville.jpg" alt="Grafisk Design 2">
+                        <img src="../images/baskerville.jpg" alt="Grafisk Design 2">
                         <div class="project-text">
                             <h3>Baskerville Poster</h3>
                             <p class="year">2023</p>
@@ -121,8 +120,9 @@
                                 modern aesthetics to add sophistication to any space.</p>
                         </div>
                     </div>
+                    <!--Projekt 3: Art Exhibition-->
                     <div class="project-item">
-                        <img src="../Images/exhibition.jpg" alt="Grafisk Design 3">
+                        <img src="../images/exhibition.jpg" alt="Grafisk Design 3">
                         <div class="project-text">
                             <h3>Art Exhibition</h3>
                             <p class="year">2023</p>
@@ -132,13 +132,13 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Web Design -->
+            <!-- Webbdesign-sektion -->
             <div id="web-design" class="project-category">
                 <h2>Web Design</h2>
                 <div class="project-grid">
+                    <!--Projekt 1: Portfolio-->
                     <div class="project-item">
-                        <img src="../Images/portfolio.jpg" alt="Web Design 1">
+                        <img src="../images/portfolio.jpg" alt="Web Design 1">
                         <div class="project-text">
                             <h3>Portfolio</h3>
                             <p class="year">2024</p>
@@ -146,8 +146,9 @@
                                 methodology, balancing aesthetics and functionality.y</p>
                         </div>
                     </div>
+                    <!--Projekt 2: Pluggportalen-->
                     <div class="project-item">
-                        <img src="../Images/pluggportalen.jpg" alt="Web Design 2">
+                        <img src="../images/pluggportalen.jpg" alt="Web Design 2">
                         <div class="project-text">
                             <h3>Pluggportalen</h3>
                             <p class="year">2024</p>
@@ -155,12 +156,13 @@
                                 studies, and enjoy the journey.</p>
                         </div>
                     </div>
+                    <!--Projekt 3: Svenska Vilddjur-->
                     <div class="project-item">
-                        <img src="../Images/vildadjur.jpg" alt="Web Design 3">
+                        <img src="../images/vildadjur.jpg" alt="Web Design 3">
                         <div class="project-text">
                             <h3>Svenska Vilddjur</h3>
                             <p class="year">2023</p>
-                            <p>A site exploring Sweden’s wild animals, their habitats, and how we can protect them for
+                            <p>A site exploring Sweden's wild animals, their habitats, and how we can protect them for
                                 the future.</p>
                         </div>
                     </div>
@@ -168,7 +170,7 @@
             </div>
         </section>
     </main>
-
+    <!--Footer: Sitemap och sociala medier-->
     <footer>
         <h2>more.</h2>
         <div class="footer-row">
@@ -192,6 +194,7 @@
                 </ul>
             </div>
         </div>
+        <!--Copyrightinformation-->
         <div class="footer-row">
             <p class="copy">&copy; 2024 <br> Coded and designed by Lisa Sjöström</p>
         </div>
