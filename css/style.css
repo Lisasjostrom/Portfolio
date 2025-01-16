@@ -702,6 +702,7 @@ p.introduction-text {
 }
 
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateY(0);
@@ -762,6 +763,10 @@ p.introduction-text {
 
   .intro-heading {
     font-size: 1.2rem;
+  }
+
+  p.introduction-text {
+    font-size: 0.9rem;
   }
 
   /* Introduction details */
