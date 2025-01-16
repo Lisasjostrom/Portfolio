@@ -1490,7 +1490,7 @@ footer ul li a {
 }
 
 /* Hover-effekt */
-footer ul li a:hover {
+.site-links a:hover {
   transform: translateX(10px);
   color: #FF9900;
 }
