@@ -1294,6 +1294,10 @@ p.introduction-text {
     align-items: center;
   }
 
+  .about .text p {
+    font-size: 0.9rem;
+  }
+
   .about-image img {
     width: 400px;
     height: auto;
