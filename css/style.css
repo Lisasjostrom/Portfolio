@@ -606,6 +606,7 @@ p.additional-text {
 @media (max-width: 768px) {
   .projects {
     padding: 0 2rem;
+    margin-bottom: -5rem;
   }
 
   .project-grid {
