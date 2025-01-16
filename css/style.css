@@ -495,8 +495,6 @@ p.additional-text {
   list-style: none;
   display: flex;
   gap: 50px;
-  padding: 0;
-  margin: 0;
 }
 
 .navbar-projects-link {
@@ -566,7 +564,7 @@ p.additional-text {
 .project-item img {
   width: 100%;
   height: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -607,7 +605,6 @@ p.additional-text {
 
 @media (max-width: 768px) {
   .projects {
-    width: 100%;
     padding: 0 2rem;
   }
 
