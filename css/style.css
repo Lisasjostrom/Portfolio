@@ -35,12 +35,23 @@ html {
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #ab782b;
 }
 
-/* Navbars */
+@media (max-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+}
+
+/* Navbars: Navbar with animation and Static Navbars for Projects and About page */
 
 /* Navbar with animations for the Homepage */
 .navbar-animate {
@@ -73,7 +84,7 @@ html {
   animation-delay: calc(0.5s * var(--index));
 }
 
-/* Define the animation for the navbar links to "slide in" from the left */
+/* Animation for the navbar links to "slide in" from the left */
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -112,7 +123,7 @@ html {
   border-radius: 3px;
 }
 
-/* On hover, expand the underline to full width */
+/* On hover: expand the underline to full width */
 .nav-link-animate:hover::before {
   width: 100%;
 }
@@ -124,7 +135,7 @@ html {
   background-color: #AF9D8F;
 }
 
-/* Responsive styling for Navbar-animate on smaller screens */
+/* Responsive styling for Navbar with animations */
 @media (max-width: 768px) {
   .navbar-animate ul {
     gap: 3rem;
@@ -185,7 +196,7 @@ html {
   background-color: #AF9D8F;
 }
 
-/* Responsive styling for Navbar for smaller screens */
+/* Responsive styling for Navbar */
 @media (max-width: 768px) {
   .navbar ul {
     gap: 3rem;
@@ -269,7 +280,7 @@ html {
   }
 }
 
-/* Responsive styling for heading and chevron on smaller screens */
+/* Responsive styling for heading and chevron */
 @media (max-width: 768px) {
 
   .heading {
@@ -354,7 +365,7 @@ p.additional-text {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive styling for section 2 on smaller screens */
+/* Responsive styling for section 2 */
 @media (max-width: 1024px) {
   .section-2 .container {
     width: 90%;
@@ -378,10 +389,6 @@ p.additional-text {
 
   .section-2 img {
     width: 100%;
-  }
-
-  p.additional-text {
-    margin-top: 2rem;
   }
 }
 
@@ -460,7 +467,7 @@ p.additional-text {
   font-family: "lft-etica-mono", sans-serif;
 }
 
-/* Responsive styling for section 3 on smaller screens */
+/* Responsive styling for section 3 */
 @media (max-width: 1024px) {
   .recent-projects {
     padding: 2rem;
@@ -514,7 +521,7 @@ p.additional-text {
   transform: translateY(5px);
 }
 
-/* Responsive styling for projects navbar on smaller screens */
+/* Responsive styling for "projects navbar" */
 @media (max-width: 768px) {
   .navbar-projects {
     padding: 1rem 2rem;
@@ -598,7 +605,7 @@ p.additional-text {
   text-align: left;
 }
 
-/* Responsive styling for projects on smaller screens */
+/* Responsive styling for projects */
 @media (max-width: 1024px) {
   .projects {
     padding: 0 3rem;
@@ -720,7 +727,7 @@ p.introduction-text {
   height: auto;
 }
 
-/* Responsiive styling for introduction section on smaller screens */
+/* Responsiive styling for introduction section */
 @media (max-width: 1024px) {
   .intro-container {
     flex-direction: column;
@@ -823,7 +830,7 @@ p.introduction-text {
 
 }
 
-/* Responsive styling for case-section-1 on smaller screens */
+/* Responsive styling for case-section-1 */
 @media (max-width: 1024px) {
   .case-section-1 {
     padding: 2rem 5rem;
@@ -879,7 +886,7 @@ p.introduction-text {
   padding: 3rem 0;
 }
 
-/* Responsive styling for case-section-3 on smaller screens */
+/* Responsive styling for case-section-3 */
 @media (max-width: 1024px) {
   .case-section-3 {
     padding: 2rem 5rem;
@@ -953,7 +960,7 @@ p.introduction-text {
   height: auto;
 }
 
-/* Responsive styling for case-section-4 on smaller screens */
+/* Responsive styling for case-section-4 */
 @media (max-width: 1024px) {
   .text-image-container-4 {
     padding: 2rem 5rem;
@@ -993,7 +1000,6 @@ p.introduction-text {
   .text-image-row-4 p {
     width: 100%;
     margin-top: -4rem;
-    /*Nödlösning*/
   }
 
   .text-image-row-4 img {
@@ -1064,7 +1070,7 @@ p.introduction-text {
   height: auto;
 }
 
-/* Responsive styling for case-section-5 on smaller screens */
+/* Responsive styling for case-section-5 */
 @media (max-width: 1024px) {
   .text-image-container-5 {
     padding: 2rem 5rem;
@@ -1084,7 +1090,6 @@ p.introduction-text {
     margin-bottom: 1rem;
     order: -1;
     margin-top: -4rem;
-    /*Nödlösning*/
   }
 
   .text-image-row-5 img {
@@ -1165,7 +1170,7 @@ p.introduction-text {
   line-height: 1.5rem;
 }
 
-/* Responsive styling for case-section-6 on smaller screens */
+/* Responsive styling for case-section-6 */
 @media (max-width: 1024px) {
   .case-section-6 {
     padding: 2rem 5rem;
@@ -1229,7 +1234,7 @@ p.introduction-text {
   object-fit: cover;
 }
 
-/* Responsive styling for case-section-7 on smaller screens */
+/* Responsive styling for case-section-7 */
 @media (max-width: 1024px) {
   .case-section-7 {
     padding: 2rem 5rem;
@@ -1341,7 +1346,7 @@ p.introduction-text {
   height: auto;
 }
 
-/* Responsive styling for about on smaller screens */
+/* Responsive styling for about me section */
 @media (max-width: 1024px) {
   .about {
     padding: 3rem;
@@ -1413,7 +1418,7 @@ p.introduction-text {
   margin-right: 10px;
 }
 
-/* Responsive styling for contact on smaller screens */
+/* Responsive styling for contact */
 @media (max-width: 1024px) {
   .contact {
     padding: 0 3rem 2rem 3rem;
@@ -1499,7 +1504,7 @@ footer ul li a {
   color: #FF9900;
 }
 
-/* Responsive styling for footer on smaller screens */
+/* Responsive styling for footer */
 @media screen and (max-width: 1024px) {
   footer {
     padding: 2rem;
