@@ -635,7 +635,6 @@ header a {
   align-items: center;
   background-color: #2E2A2A;
   padding-left: 10rem;
-  box-sizing: border-box;
 }
 
 .intro-text {
@@ -665,6 +664,7 @@ p.introduction-text {
 .intro-details {
   display: flex;
   gap: 7rem;
+  margin-bottom: 1rem;
 }
 
 .intro-details h5 {
@@ -687,7 +687,7 @@ p.introduction-text {
   color: #F9F9F6;
   display: inline-block;
   transition: transform 0.3s ease, color 0.3s ease;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 .intro-details a:hover {
@@ -701,7 +701,6 @@ p.introduction-text {
 }
 
 @keyframes bounce {
-
   0%,
   100% {
     transform: translateY(0);
@@ -721,13 +720,8 @@ p.introduction-text {
 @media (max-width: 1024px) {
   .intro-container {
     flex-direction: column;
-    padding: 2rem 5rem;
+    padding: 2rem 5rem 0rem 5rem;
     text-align: center;
-  }
-
-  .intro-text {
-    width: 100%;
-    margin-bottom: 2rem;
   }
 
   .intro-heading {
@@ -735,9 +729,14 @@ p.introduction-text {
     padding-top: 0;
   }
 
+  .intro-text {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
   .intro-details {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .intro-image {
@@ -750,22 +749,8 @@ p.introduction-text {
     padding: 2rem 3rem;
   }
 
-  .intro-text p {
-    font-size: 0.9rem;
-    line-height: 1.4rem;
-  }
-
   .intro-heading {
-    font-size: 1.5rem;
-  }
-
-  .intro-details {
-    gap: 1.5rem;
-  }
-
-  .intro-details h5,
-  .intro-details p {
-    font-size: 0.9rem;
+    font-size: 2rem;
   }
 }
 
@@ -778,19 +763,9 @@ p.introduction-text {
     font-size: 1.2rem;
   }
 
-  .intro-text p {
-    font-size: 0.8rem;
-    line-height: 1.3rem;
-  }
-
   /* Introduction details */
   .intro-details {
     gap: 1rem;
-  }
-
-  .intro-details h5,
-  .intro-details p {
-    font-size: 0.8rem;
   }
 }
 
@@ -806,7 +781,7 @@ p.introduction-text {
   font-family: "urbane", sans-serif;
   color: #2E2A2A;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .case-section-1 p {
@@ -858,7 +833,7 @@ p.introduction-text {
   font-family: "urbane", sans-serif;
   color: #2E2A2A;
   font-size: 1.2rem;
-  padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .case-section-3 p {
@@ -894,6 +869,7 @@ p.introduction-text {
 
   .case-section-3-image {
     width: 90%;
+    padding-top: 0;
   }
 }
 
@@ -907,25 +883,24 @@ p.introduction-text {
   }
 }
 
-
 /* Case-section-4: Research and data */
 .case-section-4 {
   background-color: #2E2A2A;
   padding-bottom: 3rem;
+  padding-top: 2rem;
 }
 
 .text-image-container-4 {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  padding: 1rem 15rem;
+  padding: 0 15rem;
 }
 
 .text-image-container-4 h3 {
   font-family: "urbane", sans-serif;
   color: #F9F9F6;
   font-size: 1.2rem;
-  margin-top: 2rem;
 }
 
 .text-image-row-4 {
@@ -953,11 +928,7 @@ p.introduction-text {
 /* Responsive styling for case-section-4 */
 @media (max-width: 1024px) {
   .text-image-container-4 {
-    padding: 2rem 5rem;
-  }
-
-  .text-image-container-4 h3 {
-    margin-top: 0;
+    padding: 0rem 5rem;
   }
 
   .text-image-row-4 {
@@ -978,7 +949,7 @@ p.introduction-text {
 
 @media (max-width: 768px) {
   .text-image-container-4 {
-    padding: 2rem;
+    padding: 0 2rem;
   }
 
   .text-image-row-4 {
@@ -989,7 +960,6 @@ p.introduction-text {
 
   .text-image-row-4 p {
     width: 100%;
-    margin-top: -4rem;
   }
 
   .text-image-row-4 img {
@@ -1022,20 +992,20 @@ p.introduction-text {
 .case-section-5 {
   background-color: #F9F9F6;
   padding-bottom: 3rem;
+  padding-top: 2rem;
 }
 
 .text-image-container-5 {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  padding: 1rem 15rem;
+  padding: 0 15rem;
 }
 
 .text-image-container-5 h3 {
   font-family: "urbane", sans-serif;
   color: #2E2A2A;
   font-size: 1.2rem;
-  margin-top: 2rem;
 }
 
 .text-image-row-5 {
@@ -1063,11 +1033,7 @@ p.introduction-text {
 /* Responsive styling for case-section-5 */
 @media (max-width: 1024px) {
   .text-image-container-5 {
-    padding: 2rem 5rem;
-  }
-
-  .text-image-container-5 h3 {
-    margin-top: 0;
+    padding: 0rem 5rem;
   }
 
   .text-image-row-5 {
@@ -1079,7 +1045,6 @@ p.introduction-text {
     width: 100%;
     margin-bottom: 1rem;
     order: -1;
-    margin-top: -4rem;
   }
 
   .text-image-row-5 img {
@@ -1090,7 +1055,7 @@ p.introduction-text {
 
 @media (max-width: 768px) {
   .text-image-container-5 {
-    padding: 2rem;
+    padding: 0 2rem;
   }
 
   .text-image-row-5 {
@@ -1134,7 +1099,6 @@ p.introduction-text {
 /* Case-section-6: Validation */
 .case-section-6 {
   background-color: #2E2A2A;
-  box-sizing: border-box;
 }
 
 .case-section-6-text {
@@ -1148,7 +1112,7 @@ p.introduction-text {
   font-family: "urbane", sans-serif;
   color: #F9F9F6;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .case-section-6 p {
@@ -1156,7 +1120,6 @@ p.introduction-text {
   font-weight: 500;
   font-size: 1rem;
   color: #F9F9F6;
-  margin-bottom: 1rem;
   line-height: 1.5rem;
 }
 
@@ -1182,7 +1145,6 @@ p.introduction-text {
 /* Case-section-7: Solution */
 .case-section-7 {
   background-color: #F9F9F6;
-  box-sizing: border-box;
 }
 
 .case-section-7-text {
@@ -1196,7 +1158,7 @@ p.introduction-text {
   font-family: "urbane", sans-serif;
   color: #2E2A2A;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .case-section-7 p {
@@ -1204,7 +1166,6 @@ p.introduction-text {
   font-weight: 500;
   font-size: 1rem;
   color: #2E2A2A;
-  margin-bottom: 1rem;
   line-height: 1.5rem;
 }
 
@@ -1213,7 +1174,6 @@ p.introduction-text {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
   align-items: center;
 }
 
@@ -1221,7 +1181,6 @@ p.introduction-text {
   width: 20%;
   min-width: 150px;
   height: auto;
-  object-fit: cover;
 }
 
 /* Responsive styling for case-section-7 */
@@ -1232,14 +1191,11 @@ p.introduction-text {
 
   .case-7-image-row {
     justify-content: center;
-    gap: 1rem;
   }
 
   .case-7-image-row img {
     width: 40%;
-    min-width: 200px;
     height: auto;
-    object-fit: contain;
   }
 }
 
@@ -1250,16 +1206,12 @@ p.introduction-text {
 
   .case-7-image-row {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
 
   .case-7-image-row img {
     max-width: 90%;
     min-width: 250px;
     height: auto;
-    margin-bottom: 1rem;
   }
 }
 
@@ -1271,15 +1223,12 @@ p.introduction-text {
 
   .case-7-image-row {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .case-7-image-row img {
     max-width: 90%;
     min-width: 270px;
     height: auto;
-    margin-bottom: 1rem;
   }
 }
 
