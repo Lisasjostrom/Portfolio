@@ -481,6 +481,12 @@ p.additional-text {
   }
 }
 
+@media (max-width: 480px) {
+.text-container .year, .text-container .caption {
+  font-size: 0.9rem;
+}
+}
+
 /* Projects Page */
 
 /* Projects navbar */
@@ -622,6 +628,12 @@ p.additional-text {
   #branding .project-item:nth-child(3) {
     display: none;
   }
+}
+
+@media (max-width: 480px) {
+.project-text .year, .project-text p {
+  font-size: 0.9rem;
+}
 }
 
 /* Case page */
