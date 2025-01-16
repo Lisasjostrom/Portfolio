@@ -173,7 +173,6 @@ html {
 }
 
 /* Headings for Projects och About */
-
 .about-heading,
 .projects-heading {
   font-size: 3rem;
@@ -183,9 +182,7 @@ html {
   padding: 2rem 3rem;
 }
 
-
 /* Homepage */
-
 .overflow {
   background-color: #2E2A2A;
   height: 40vh;
@@ -264,9 +261,7 @@ html {
   }
 }
 
-
 /* Section 2: About me */
-
 .section-2 {
   padding-bottom: 5rem;
   background-color: #2E2A2A;
@@ -340,7 +335,6 @@ p.additional-text {
 }
 
 /* Responsive styling for section 2 on smaller screens */
-
 @media (max-width: 1024px) {
   .section-2 .container {
     width: 90%;
@@ -372,7 +366,6 @@ p.additional-text {
 }
 
 /* Section 3: Recent projects */
-
 .section-3 {
   background-color: #F9F9F6;
 }
@@ -471,7 +464,6 @@ p.additional-text {
 /* Projects Page */
 
 /* Projects navbar */
-
 .navbar-projects {
   display: flex;
   justify-content: center;
@@ -849,6 +841,7 @@ p.introduction-text {
   font-family: "urbane", sans-serif;
   color: #2E2A2A;
   font-size: 1.2rem;
+  padding-bottom: 1rem;
 }
 
 .case-section-3 p {
@@ -979,7 +972,8 @@ p.introduction-text {
 
   .text-image-row-4 p {
     width: 100%;
-    margin-top: -4rem; /*Nödlösning*/
+    margin-top: -4rem;
+    /*Nödlösning*/
   }
 
   .text-image-row-4 img {
@@ -1069,7 +1063,8 @@ p.introduction-text {
     width: 100%;
     margin-bottom: 1rem;
     order: -1;
-    margin-top: -4rem; /*Nödlösning*/
+    margin-top: -4rem;
+    /*Nödlösning*/
   }
 
   .text-image-row-5 img {
