@@ -51,7 +51,7 @@ html {
   }
 }
 
-/* Navbars: Navbar with animation and Static Navbars for Projects and About page */
+/* Navbars: Navbar with animation for Homepage and Static Navbars for Projects and About page */
 
 /* Navbar with animations for the Homepage */
 .navbar-animate {
@@ -482,9 +482,11 @@ p.additional-text {
 }
 
 @media (max-width: 480px) {
-.text-container .year, .text-container .caption {
-  font-size: 0.9rem;
-}
+
+  .text-container .year,
+  .text-container .caption {
+    font-size: 0.9rem;
+  }
 }
 
 /* Projects Page */
@@ -631,9 +633,11 @@ p.additional-text {
 }
 
 @media (max-width: 480px) {
-.project-text .year, .project-text p {
-  font-size: 0.9rem;
-}
+
+  .project-text .year,
+  .project-text p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Case page */
@@ -1250,7 +1254,7 @@ p.introduction-text {
   }
 }
 
-/* Back to top link*/
+/* Back to top link */
 .to-top-link {
   text-align: center;
   padding: 2rem;
