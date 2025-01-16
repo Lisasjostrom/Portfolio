@@ -1318,6 +1318,10 @@ p.introduction-text {
   .about h2 {
     font-size: 2rem;
   }
+
+  .about .text p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Contact */
