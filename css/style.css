@@ -1289,8 +1289,13 @@ p.introduction-text {
 @media (max-width: 1024px) {
   .about {
     padding: 3rem;
-    gap: 4rem;
+    gap: 2rem;
     align-items: center;
+  }
+
+  .about-image img {
+    width: 400px;
+    height: auto;
   }
 }
 
@@ -1316,11 +1321,8 @@ p.introduction-text {
 
 /* Contact */
 .contact {
-  background-color: #F9F9F6;
   padding: 2rem 10rem;
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .contact h2 {
@@ -1328,28 +1330,26 @@ p.introduction-text {
   font-weight: bold;
   color: #2E2A2A;
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact h3 {
   font-family: "basic-sans", sans-serif;
   font-weight: 400;
   color: #2E2A2A;
-  margin-bottom: 2rem;
+  margin-bottom: 0.7rem;
   font-size: 1.2rem;
 }
 
 .contact li {
   list-style: none;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact ul li a {
   font-family: "basic-sans", sans-serif;
   font-weight: 400;
   color: #2E2A2A;
-  display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .fa-solid {
@@ -1366,7 +1366,7 @@ p.introduction-text {
 
 @media (max-width: 768px) {
   .contact {
-    padding: 2rem;
+    padding: 1rem 2rem 2rem 2rem;
   }
 }
 
