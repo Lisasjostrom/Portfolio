@@ -1,4 +1,4 @@
-/* Grundläggande styling */
+/* Basic styling */
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +13,7 @@ main {
   background-color: #F9F9F6;
 }
 
+/* Enable smooth scrolling and adjust padding for anchors */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -20,7 +21,7 @@ html {
 
 /* Navbars */
 
-/* Rörlig Navbar för Startsidan */
+/* Navbar with animations for the Homepage */
 
 .navbar-animate {
   font-family: "lft-etica-mono", sans-serif;
@@ -52,7 +53,7 @@ html {
   animation-delay: calc(0.5s * var(--index));
 }
 
-/* Animation för att länkarna ska "segla in" från vänster */
+/* Define the animation for the navbar links to "slide in" from the left */
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -65,7 +66,7 @@ html {
   }
 }
 
-/* För att sätta index på varje länk */
+/* Set custom index values for each navbar item for staggered animation */
 .navbar-animate li:nth-child(1) {
   --index: 1;
 }
@@ -78,7 +79,7 @@ html {
   --index: 3;
 }
 
-/* För hover-effekt med växande streck från vänster till höger */
+/* Hover effect: underline that grows from left to right */
 .nav-link-animate::before {
   content: "";
   position: absolute;
@@ -91,28 +92,26 @@ html {
   border-radius: 3px;
 }
 
+/* On hover, expand the underline to full width */
 .nav-link-animate:hover::before {
   width: 100%;
 }
 
-/* För den aktiva länken (streck under "Start" när sidan laddas) */
+/* Active link effect: underline for the "Start" link when the page loads */
 .nav-link-animate.active::before {
   width: 100%;
   height: 2px;
   background-color: #AF9D8F;
 }
 
-/* Responsivitet Navbar-animate */
+/* Responsive styling for Navbar-animate on smaller screens */
 @media (max-width: 768px) {
   .navbar-animate ul {
     gap: 3rem;
   }
-
 }
 
-
-
-/* Statisk Navbar för Projects och About */
+/* Static Navbar for Projects and About Pages */
 .navbar {
   font-family: "lft-etica-mono", sans-serif;
   font-weight: 200;
@@ -141,6 +140,7 @@ html {
   transform: translateX(0);
 }
 
+/* Hover effect: underline that grows from left to right */
 .nav-link::before {
   content: "";
   position: absolute;
@@ -153,24 +153,26 @@ html {
   border-radius: 3px;
 }
 
+/* On hover, expand the underline to full width */
 .nav-link:hover::before {
   width: 100%;
 }
 
+/* Active link effect: underline for the active link */
 .nav-link.active::before {
   width: 100%;
   height: 2px;
   background-color: #AF9D8F;
 }
 
-/* Responsivitet Navbar-animate */
+/* Responsive styling for Navbar for smaller screens */
 @media (max-width: 768px) {
   .navbar ul {
     gap: 3rem;
   }
 }
 
-/* Headings för Projects och About */
+/* Headings for Projects och About */
 
 .about-heading,
 .projects-heading {
@@ -182,7 +184,7 @@ html {
 }
 
 
-/* Startsida */
+/* Homepage */
 
 .overflow {
   background-color: #2E2A2A;
@@ -207,8 +209,7 @@ html {
   animation: slideInFromLeft 1s ease-out forwards;
 }
 
-/* Animation för att rubriken ska "segla in" från vänster */
-
+/* Animation to make the heading slide in from the left */
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -221,44 +222,50 @@ html {
   }
 }
 
+/* Chevron-down icon styling */
 .chevron-down {
-  width: 15px; /* Bredden på pilen */
-  height: 15px; /* Höjden på pilen */
-  border-left: 3px solid #F9F9F6; /* Vänster diagonal linje */
-  border-bottom: 3px solid #F9F9F6; /* Höger diagonal linje */
-  transform: rotate(-45deg); /* Rotera för att skapa "V"-formen */
+  width: 15px;
+  height: 15px;
+  border-left: 3px solid #F9F9F6;
+  border-bottom: 3px solid #F9F9F6;
+  /* Rotate to form a "V" shape */
+  transform: rotate(-45deg);
   position: absolute;
   left: 50%;
+  /* Adjust position and rotation */
   transform: translateX(-50%) rotate(-45deg);
   bottom: 2%;
+  /* Apply smooth bouncing animation */
   animation: smooth-bounce 1.5s infinite;
 }
 
-/* Nyckelramsanimation för mjuk studs */
+/* Animation for the bouncing effect of the chevron */
 @keyframes smooth-bounce {
-  0%, 100% {
-    transform: translate(-50%, 0) rotate(-45deg); /* Start- och slutposition */
+
+  0%,
+  100% {
+    transform: translate(-50%, 0) rotate(-45deg);
   }
+
   50% {
-    transform: translate(-50%, -5px) rotate(-45deg); /* Flytta upp */
+    transform: translate(-50%, -5px) rotate(-45deg);
   }
 }
 
-/* Responsivitet för heading och pilen nedåt */
+/* Responsive styling for heading and chevron on smaller screens */
 @media (max-width: 768px) {
 
   .heading {
     margin-bottom: 1rem;
   }
+
   .chevron-down {
     bottom: 1%;
-
   }
 }
 
 
-
-/* Sektion 2 */
+/* Section 2: About me */
 
 .section-2 {
   padding-bottom: 5rem;
@@ -332,21 +339,20 @@ p.additional-text {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Mediaquery */
+/* Responsive styling for section 2 on smaller screens */
 
 @media (max-width: 1024px) {
-
   .section-2 .container {
     width: 90%;
   }
 
-  .section-2 .image {
-    width: 50%;
-    margin-bottom: 1rem;
-  }
-
   .section-2 .text {
     width: 100%;
+  }
+
+  .section-2 .additional-text {
+    font-size: 0.9rem;
+    margin-top: 1rem;
   }
 }
 
@@ -356,18 +362,16 @@ p.additional-text {
     text-align: left;
   }
 
-  .section-2 .image {
+  .section-2 img {
     width: 100%;
-    margin-bottom: 1rem;
   }
 
   p.additional-text {
     margin-top: 2rem;
   }
-
 }
 
-/* Sektion 3 */
+/* Section 3: Recent projects */
 
 .section-3 {
   background-color: #F9F9F6;
@@ -409,14 +413,11 @@ p.additional-text {
 
 .image-link img {
   transition: transform 0.3s ease, opacity 0.3s ease;
-  /* Smidig övergång för effekterna */
 }
 
 .image-link:hover img {
   transform: scale(1.05);
-  /* Förstorar bilden vid hover */
 }
-
 
 .text-container {
   width: 100%;
@@ -446,13 +447,14 @@ p.additional-text {
   font-family: "lft-etica-mono", sans-serif;
 }
 
-
-
-/* Mediaquery */
-
+/* Responsive styling for section 3 on smaller screens */
 @media (max-width: 1024px) {
   .recent-projects {
     padding: 2rem;
+  }
+
+  .text-container .year {
+    margin-bottom: 1rem;
   }
 }
 
@@ -466,9 +468,9 @@ p.additional-text {
   }
 }
 
-/* Projects */
+/* Projects Page */
 
-/* Navbar-Projects */
+/* Projects navbar */
 
 .navbar-projects {
   display: flex;
@@ -481,7 +483,6 @@ p.additional-text {
   list-style: none;
   display: flex;
   gap: 50px;
-  /* Sätter avstånd mellan varje länk */
   padding: 0;
   margin: 0;
 }
@@ -493,19 +494,15 @@ p.additional-text {
   text-decoration: none;
   color: #2E2A2A;
   display: inline-block;
-  /* Gör att länken beter sig som en block, vilket behövs för transformering */
   transition: transform 0.3s ease;
-  /* Lägg till transition för att effekten ska vara smidig */
 }
 
 .navbar-projects-link:hover {
   color: #AF9D8F;
-  /* Förändra färgen vid hover */
   transform: translateY(5px);
-  /* Länken hoppar ner 5px när man hovrar */
 }
 
-/* Navbar-projects */
+/* Responsive styling for projects navbar on smaller screens */
 @media (max-width: 768px) {
   .navbar-projects {
     padding: 1rem 2rem;
@@ -523,7 +520,6 @@ p.additional-text {
 }
 
 /* Projects */
-
 .projects {
   padding: 0 6rem;
   background-color: #F9F9F6;
@@ -535,7 +531,7 @@ p.additional-text {
 
 .project-category h2 {
   font-family: "lft-etica-mono", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   margin: 2rem 0;
   color: #2E2A2A;
@@ -562,12 +558,9 @@ p.additional-text {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* När man hovrar på länken (a), förstora bilden */
 .project-item a:hover img {
   transform: scale(1.05);
-  /* Förstorar bilden vid hover */
 }
-
 
 .project-text h3 {
   font-family: "urbane", sans-serif;
@@ -593,13 +586,13 @@ p.additional-text {
   text-align: left;
 }
 
-/* Responsiv design för mindre skärmar (t.ex. mobiler och tablets) */
-
+/* Responsive styling for projects on smaller screens */
 @media (max-width: 1024px) {
   .projects {
     padding: 0 3rem;
   }
 }
+
 @media (max-width: 768px) {
   .projects {
     width: 100%;
@@ -608,7 +601,6 @@ p.additional-text {
 
   .project-grid {
     grid-template-columns: 1fr;
-    /* En kolumn per rad för alla projekt */
   }
 
   .project-item img {
@@ -622,12 +614,12 @@ p.additional-text {
   }
 }
 
-/* Case-sida*/
-
+/* Case page */
 header a {
   text-decoration: none;
 }
 
+/* Introduction section */
 .intro-container {
   margin-top: 1px;
   display: flex;
@@ -700,9 +692,12 @@ p.introduction-text {
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -713,8 +708,7 @@ p.introduction-text {
   height: auto;
 }
 
-/* Responsivitet - intro */
-
+/* Responsiive styling for introduction section on smaller screens */
 @media (max-width: 1024px) {
   .intro-container {
     flex-direction: column;
@@ -780,6 +774,7 @@ p.introduction-text {
     line-height: 1.3rem;
   }
 
+  /* Introduction details */
   .intro-details {
     gap: 1rem;
   }
@@ -790,8 +785,7 @@ p.introduction-text {
   }
 }
 
-/* Case-section-1 */
-
+/* Case-section-1: Introduction, My role, and Challenge */
 .case-section-1 {
   max-width: 90ch;
   margin: 0 auto;
@@ -802,7 +796,7 @@ p.introduction-text {
 .case-section-1 h3 {
   font-family: "urbane", sans-serif;
   color: #2E2A2A;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
@@ -813,10 +807,11 @@ p.introduction-text {
   margin-bottom: 2rem;
   color: #2E2A2A;
   font-weight: 500;
+  line-height: 1.5rem;
 
 }
 
-/* Responsivitet case-section-1 */
+/* Responsive styling for case-section-1 on smaller screens */
 @media (max-width: 1024px) {
   .case-section-1 {
     padding: 2rem 5rem;
@@ -835,16 +830,14 @@ p.introduction-text {
   }
 }
 
-/* Case-section-2 */
-
+/* Case-section-2: Full width image */
 .case-section-2 img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Case-section- 3*/
-
+/* Case-section- 3: Design process */
 .case-section-3 {
   max-width: 90ch;
   margin: 0 auto;
@@ -855,7 +848,7 @@ p.introduction-text {
 .case-section-3 h3 {
   font-family: "urbane", sans-serif;
   color: #2E2A2A;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .case-section-3 p {
@@ -873,8 +866,7 @@ p.introduction-text {
   padding: 3rem 0;
 }
 
-/* Responsivitet case-section-3 */
-
+/* Responsive styling for case-section-3 on smaller screens */
 @media (max-width: 1024px) {
   .case-section-3 {
     padding: 2rem 5rem;
@@ -906,7 +898,7 @@ p.introduction-text {
 }
 
 
-/* Case-section-4 */
+/* Case-section-4: Research and data */
 .case-section-4 {
   background-color: #2E2A2A;
   padding-bottom: 3rem;
@@ -922,7 +914,7 @@ p.introduction-text {
 .text-image-container-4 h3 {
   font-family: "urbane", sans-serif;
   color: #F9F9F6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 2rem;
 }
 
@@ -937,7 +929,7 @@ p.introduction-text {
   width: 90ch;
   margin: 0;
   color: #F9F9F6;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   font-family: "basic-sans", sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -948,8 +940,7 @@ p.introduction-text {
   height: auto;
 }
 
-/* Responsivitet case-section-4 */
-
+/* Responsive styling for case-section-4 on smaller screens */
 @media (max-width: 1024px) {
   .text-image-container-4 {
     padding: 2rem 5rem;
@@ -988,6 +979,7 @@ p.introduction-text {
 
   .text-image-row-4 p {
     width: 100%;
+    margin-top: -4rem; /*Nödlösning*/
   }
 
   .text-image-row-4 img {
@@ -1016,8 +1008,7 @@ p.introduction-text {
   }
 }
 
-/* Case-section-5*/
-
+/* Case-section-5: Explorations */
 .case-section-5 {
   background-color: #F9F9F6;
   padding-bottom: 3rem;
@@ -1033,7 +1024,7 @@ p.introduction-text {
 .text-image-container-5 h3 {
   font-family: "urbane", sans-serif;
   color: #2E2A2A;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 2rem;
 }
 
@@ -1048,7 +1039,7 @@ p.introduction-text {
   width: 90ch;
   margin: 0;
   color: #2E2A2A;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
   font-family: "basic-sans", sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -1059,8 +1050,7 @@ p.introduction-text {
   height: auto;
 }
 
-/* Responsivitet case-section-5 */
-
+/* Responsive styling for case-section-5 on smaller screens */
 @media (max-width: 1024px) {
   .text-image-container-5 {
     padding: 2rem 5rem;
@@ -1079,6 +1069,7 @@ p.introduction-text {
     width: 100%;
     margin-bottom: 1rem;
     order: -1;
+    margin-top: -4rem; /*Nödlösning*/
   }
 
   .text-image-row-5 img {
@@ -1130,8 +1121,7 @@ p.introduction-text {
   }
 }
 
-/* Case-section-6 */
-
+/* Case-section-6: Validation */
 .case-section-6 {
   background-color: #2E2A2A;
   box-sizing: border-box;
@@ -1147,7 +1137,7 @@ p.introduction-text {
 .case-section-6 h3 {
   font-family: "urbane", sans-serif;
   color: #F9F9F6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
@@ -1157,9 +1147,10 @@ p.introduction-text {
   font-size: 1rem;
   color: #F9F9F6;
   margin-bottom: 1rem;
+  line-height: 1.5rem;
 }
 
-/* Responsivitet case-section-6 */
+/* Responsive styling for case-section-6 on smaller screens */
 @media (max-width: 1024px) {
   .case-section-6 {
     padding: 2rem 5rem;
@@ -1178,8 +1169,7 @@ p.introduction-text {
   }
 }
 
-/* Case-section-7 */
-
+/* Case-section-7: Solution */
 .case-section-7 {
   background-color: #F9F9F6;
   box-sizing: border-box;
@@ -1195,7 +1185,7 @@ p.introduction-text {
 .case-section-7 h3 {
   font-family: "urbane", sans-serif;
   color: #2E2A2A;
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
@@ -1205,6 +1195,7 @@ p.introduction-text {
   font-size: 1rem;
   color: #2E2A2A;
   margin-bottom: 1rem;
+  line-height: 1.5rem;
 }
 
 .case-7-image-row {
@@ -1219,12 +1210,11 @@ p.introduction-text {
 .case-7-image-row img {
   width: 20%;
   min-width: 150px;
-  /* Förhindrar att bilderna blir för små */
   height: auto;
   object-fit: cover;
 }
 
-/* Respinsivitet case-section-7 */
+/* Responsive styling for case-section-7 on smaller screens */
 @media (max-width: 1024px) {
   .case-section-7 {
     padding: 2rem 5rem;
@@ -1238,7 +1228,6 @@ p.introduction-text {
   .case-7-image-row img {
     width: 40%;
     min-width: 200px;
-    /* Minsta bredd för att bilderna ska vara större */
     height: auto;
     object-fit: contain;
   }
@@ -1284,8 +1273,7 @@ p.introduction-text {
   }
 }
 
-/* To top link*/
-
+/* Back to top link*/
 .to-top-link {
   text-align: center;
   padding: 2rem;
@@ -1303,16 +1291,14 @@ p.introduction-text {
   color: #FF9900;
 }
 
-/*About page */
+/* About page */
 
-
-/* About section */
+/* About me section */
 .about {
   background-color: #F9F9F6;
   padding: 2rem 10rem;
   display: flex;
   align-items: center;
-  /* Centrerar bilden med textens mitt */
   gap: 6rem;
 }
 
@@ -1340,7 +1326,7 @@ p.introduction-text {
   height: auto;
 }
 
-/* Medieregler för mindre skärmar */
+/* Responsive styling for about on smaller screens */
 @media (max-width: 1024px) {
   .about {
     padding: 3rem;
@@ -1369,16 +1355,13 @@ p.introduction-text {
   }
 }
 
-/*Contact section */
-
-/* Contact section */
+/* Contact */
 .contact {
   background-color: #F9F9F6;
   padding: 2rem 10rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* Här ändrar vi till vänsterjustering */
 }
 
 .contact h2 {
@@ -1394,6 +1377,7 @@ p.introduction-text {
   font-weight: 400;
   color: #2E2A2A;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
 .contact li {
@@ -1414,12 +1398,7 @@ p.introduction-text {
   margin-right: 10px;
 }
 
-.connect li a:hover {
-  color: #FF9900;
-  transform: translateX(10px);
-}
-
-/* Medieregler */
+/* Responsive styling for contact on smaller screens */
 @media (max-width: 1024px) {
   .contact {
     padding: 0 3rem 2rem 3rem;
@@ -1432,15 +1411,7 @@ p.introduction-text {
   }
 }
 
-
-
-
-
-
-
-
 /* Footer */
-
 footer {
   background-color: #2E2A2A;
   padding: 1rem 3rem;
@@ -1467,7 +1438,7 @@ footer h2 {
   margin-bottom: 20px;
   font-family: "basic-sans", sans-serif;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #F9F9F6;
 }
 
@@ -1489,12 +1460,6 @@ footer ul li a {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover-effekt */
-.site-links a:hover {
-  transform: translateX(10px);
-  color: #FF9900;
-}
-
 .social-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1514,7 +1479,12 @@ footer ul li a {
   font-size: 1rem;
 }
 
-/* Mediaquery för 1024px */
+.site-links a:hover {
+  transform: translateX(10px);
+  color: #FF9900;
+}
+
+/* Responsive styling for footer on smaller screens */
 @media screen and (max-width: 1024px) {
   footer {
     padding: 2rem;
@@ -1529,7 +1499,6 @@ footer ul li a {
   }
 }
 
-/* Mediaquery för 768px */
 @media (max-width: 768px) {
   footer {
     padding: 1.5rem;
@@ -1561,5 +1530,3 @@ footer ul li a {
     gap: 8px;
   }
 }
-
-
