@@ -13,7 +13,6 @@ main {
   background-color: #F9F9F6;
 }
 
-/* Enable smooth scrolling and adjust padding for anchors */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
@@ -39,6 +38,7 @@ html {
   background: #ab782b;
 }
 
+/* Responsive design for scrollbar */
 @media (max-width: 1024px) {
   ::-webkit-scrollbar {
     width: 10px;
@@ -53,7 +53,7 @@ html {
 
 /* Navbars: Navbar with animation for Homepage and Static Navbars for Projects and About page */
 
-/* Navbar with animations for the Homepage */
+/* Navbar with animations for Homepage */
 .navbar-animate {
   font-family: "lft-etica-mono", sans-serif;
   font-weight: 200;
