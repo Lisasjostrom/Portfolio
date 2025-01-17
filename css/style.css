@@ -392,6 +392,17 @@ p.additional-text {
   }
 }
 
+@media (max-width: 480px) {
+
+  .text h2, .text p {
+    font-size: 1.2rem;
+  }
+
+  .section-3 .recent-projects h2 {
+    font-size: 1.3rem;
+  }
+}
+
 /* Section 3: Recent projects */
 .section-3 {
   background-color: #F9F9F6;
@@ -482,6 +493,9 @@ p.additional-text {
 }
 
 @media (max-width: 480px) {
+  .text-container h3 {
+    font-size: 1rem;
+  }
 
   .text-container .year,
   .text-container .caption {
@@ -532,8 +546,12 @@ p.additional-text {
     padding: 1rem 3rem;
   }
 
+  .navbar-projects-list {
+    gap: 2rem;
+  }
+
   .navbar-projects-link {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -614,7 +632,10 @@ p.additional-text {
 @media (max-width: 768px) {
   .projects {
     padding: 0 2rem;
-    margin-bottom: -5rem;
+  }
+
+  .project-category {
+    padding-bottom: 2rem;
   }
 
   .project-grid {
@@ -633,6 +654,14 @@ p.additional-text {
 }
 
 @media (max-width: 480px) {
+
+  .projects h2 {
+    font-size: 1.2rem;
+  }
+
+  .project-text h3 {
+    font-size: 1rem;
+  }
 
   .project-text .year,
   .project-text p {
@@ -1341,7 +1370,7 @@ p.introduction-text {
   }
 
   .about h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .about .text p {
@@ -1397,6 +1426,16 @@ p.introduction-text {
 @media (max-width: 768px) {
   .contact {
     padding: 1rem 2rem 2rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact h2{
+   font-size: 1.2rem;
+  }
+
+  .connect h3 {
+    font-size: 1.1rem;
   }
 }
 
